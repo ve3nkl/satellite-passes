@@ -61,4 +61,4 @@ There are additional options for all utilities, use **--help** to display them (
 Please, keep in mind that generating **pdf** files may take some time depending on how modern your computer is. 
 
 ### What is the License?
-The Python code is distributed under the "MIT" (some also call it "Expat") license. However, bacause of the fact that the **libgal** library is distributed under GNU GPL 2, the entire package is governed by the **GNU GPL 2** license.
+The Python code is distributed under the "MIT" (some also call it "Expat") license. However, because of the fact that the **libgal** library is distributed under GNU GPL 2, the entire package is governed by the **GNU GPL 2** license.
