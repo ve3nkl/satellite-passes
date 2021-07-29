@@ -21,6 +21,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+- History -------------------------------------------------------------------
+2021/07/28   1.2   Make changes for orbit # calculations
 -----------------------------------------------------------------------------
 
 Wrapping up gravity model structure initialization and other C routines.

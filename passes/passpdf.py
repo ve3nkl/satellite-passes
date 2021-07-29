@@ -19,6 +19,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+- History -------------------------------------------------------------------
+2021/07/28   1.2   Show orbit # if available
 -----------------------------------------------------------------------------
 
 This script reads satellite pass info from stdin and generates PDF document
@@ -312,7 +314,7 @@ if __name__ == "__main__":
   args = parser.parse_args()
   
   if args.version:
-    print("passpdf.py verion 1.1")
+    print("passpdf.py verion 1.2")
     print("Copyright (c) 2014-2020, 2021 Nikolai Ozerov (VE3NKL)")
     quit(0)
 

@@ -19,6 +19,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+- History -------------------------------------------------------------------
+2021/07/28   1.2   Calculate orbit # for elliptical orbits
 -----------------------------------------------------------------------------
 
 This script calculates and prints details on satellite passes as a yaml document.
@@ -298,7 +300,7 @@ if __name__ == "__main__":
   args = parser.parse_args()
   
   if args.version:
-    print("satpass.py verion 1.1")
+    print("satpass.py verion 1.2")
     print("Copyright (c) 2012-2020, 2021 Nikolai Ozerov (VE3NKL)")
     quit(0)
 

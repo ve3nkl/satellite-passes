@@ -1299,7 +1299,7 @@ static const char __pyx_k_ascending_node_mean_anomaly[] = "ascending_node_mean_a
 static const char __pyx_k_ascending_node_true_anomaly[] = "ascending_node_true_anomaly";
 static const char __pyx_k_norm_epoc_at_ascending_node[] = "norm_epoc_at_ascending_node";
 static const char __pyx_k_gal_gmget_wgs72_returned_code[] = "gal_gmget_wgs72 returned code ";
-static const char __pyx_k_Copyright_c_2014_2020_2021_Niko[] = "\nCopyright (c) 2014-2020, 2021 Nikolai Ozerov (VE3NKL)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n-----------------------------------------------------------------------------\n\nWrapping up gravity model structure initialization and other C routines.\n\n";
+static const char __pyx_k_Copyright_c_2014_2020_2021_Niko[] = "\nCopyright (c) 2014-2020, 2021 Nikolai Ozerov (VE3NKL)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n- History -------------------------------------------------------------------\n2021/07/28   1.2   Make changes for orbit # calculations\n-----------------------------------------------------------------------------\n\nWrapping up gravity model structure initialization and other C routines.\n\n";
 static const char __pyx_k_Date_Time_in_invalid_range_for_g[] = "Date/Time in invalid range for gal_gsupv00.";
 static PyObject *__pyx_kp_u_Date_Time_in_invalid_range_for_g;
 static PyObject *__pyx_n_s_a;
@@ -1449,7 +1449,7 @@ static PyObject *__pyx_codeobj__10;
 static PyObject *__pyx_codeobj__12;
 /* Late includes */
 
-/* "psgp4gm.pyx":269
+/* "psgp4gm.pyx":271
  *        f..f - is time of the day as a fraction of 24 hours
  * """
  * def epoc2norm(yy, ddd):             # <<<<<<<<<<<<<<
@@ -1492,11 +1492,11 @@ static PyObject *__pyx_pw_7psgp4gm_1epoc2norm(PyObject *__pyx_self, PyObject *__
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_ddd)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("epoc2norm", 1, 2, 2, 1); __PYX_ERR(0, 269, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("epoc2norm", 1, 2, 2, 1); __PYX_ERR(0, 271, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "epoc2norm") < 0)) __PYX_ERR(0, 269, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "epoc2norm") < 0)) __PYX_ERR(0, 271, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -1509,7 +1509,7 @@ static PyObject *__pyx_pw_7psgp4gm_1epoc2norm(PyObject *__pyx_self, PyObject *__
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("epoc2norm", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 269, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("epoc2norm", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 271, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("psgp4gm.epoc2norm", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -1539,32 +1539,32 @@ static PyObject *__pyx_pf_7psgp4gm_epoc2norm(CYTHON_UNUSED PyObject *__pyx_self,
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("epoc2norm", 0);
 
-  /* "psgp4gm.pyx":273
+  /* "psgp4gm.pyx":275
  *   cdef int days
  *   cdef double r
  *   if yy >= 60:             # <<<<<<<<<<<<<<
  *     year = 1900 + yy   # Assume 20th century: 19xx
  *   else:
  */
-  __pyx_t_1 = PyObject_RichCompare(__pyx_v_yy, __pyx_int_60, Py_GE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 273, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 273, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(__pyx_v_yy, __pyx_int_60, Py_GE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 275, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 275, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "psgp4gm.pyx":274
+    /* "psgp4gm.pyx":276
  *   cdef double r
  *   if yy >= 60:
  *     year = 1900 + yy   # Assume 20th century: 19xx             # <<<<<<<<<<<<<<
  *   else:
  *     year = 2000 + yy   # Assume 21st century: 20xx
  */
-    __pyx_t_1 = __Pyx_PyInt_AddCObj(__pyx_int_1900, __pyx_v_yy, 0x76C, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 274, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_AddCObj(__pyx_int_1900, __pyx_v_yy, 0x76C, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 276, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 274, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 276, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_year = __pyx_t_3;
 
-    /* "psgp4gm.pyx":273
+    /* "psgp4gm.pyx":275
  *   cdef int days
  *   cdef double r
  *   if yy >= 60:             # <<<<<<<<<<<<<<
@@ -1574,7 +1574,7 @@ static PyObject *__pyx_pf_7psgp4gm_epoc2norm(CYTHON_UNUSED PyObject *__pyx_self,
     goto __pyx_L3;
   }
 
-  /* "psgp4gm.pyx":276
+  /* "psgp4gm.pyx":278
  *     year = 1900 + yy   # Assume 20th century: 19xx
  *   else:
  *     year = 2000 + yy   # Assume 21st century: 20xx             # <<<<<<<<<<<<<<
@@ -1582,25 +1582,25 @@ static PyObject *__pyx_pf_7psgp4gm_epoc2norm(CYTHON_UNUSED PyObject *__pyx_self,
  *   days = (<int>ddd)-1  # Number of full days passed in this year
  */
   /*else*/ {
-    __pyx_t_1 = __Pyx_PyInt_AddCObj(__pyx_int_2000, __pyx_v_yy, 0x7D0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 276, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_AddCObj(__pyx_int_2000, __pyx_v_yy, 0x7D0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 278, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 276, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 278, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_v_year = __pyx_t_3;
   }
   __pyx_L3:;
 
-  /* "psgp4gm.pyx":278
+  /* "psgp4gm.pyx":280
  *     year = 2000 + yy   # Assume 21st century: 20xx
  * 
  *   days = (<int>ddd)-1  # Number of full days passed in this year             # <<<<<<<<<<<<<<
  *   if year > 1900:
  *     days += (year-1900)*365    # Number of days in previous years with
  */
-  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_v_ddd); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 278, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_v_ddd); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 280, __pyx_L1_error)
   __pyx_v_days = (((int)__pyx_t_3) - 1);
 
-  /* "psgp4gm.pyx":279
+  /* "psgp4gm.pyx":281
  * 
  *   days = (<int>ddd)-1  # Number of full days passed in this year
  *   if year > 1900:             # <<<<<<<<<<<<<<
@@ -1610,7 +1610,7 @@ static PyObject *__pyx_pf_7psgp4gm_epoc2norm(CYTHON_UNUSED PyObject *__pyx_self,
   __pyx_t_2 = ((__pyx_v_year > 0x76C) != 0);
   if (__pyx_t_2) {
 
-    /* "psgp4gm.pyx":280
+    /* "psgp4gm.pyx":282
  *   days = (<int>ddd)-1  # Number of full days passed in this year
  *   if year > 1900:
  *     days += (year-1900)*365    # Number of days in previous years with             # <<<<<<<<<<<<<<
@@ -1619,7 +1619,7 @@ static PyObject *__pyx_pf_7psgp4gm_epoc2norm(CYTHON_UNUSED PyObject *__pyx_self,
  */
     __pyx_v_days = (__pyx_v_days + ((__pyx_v_year - 0x76C) * 0x16D));
 
-    /* "psgp4gm.pyx":281
+    /* "psgp4gm.pyx":283
  *   if year > 1900:
  *     days += (year-1900)*365    # Number of days in previous years with
  *     days += (year-1900-1) // 4 # additional days for leap years             # <<<<<<<<<<<<<<
@@ -1628,7 +1628,7 @@ static PyObject *__pyx_pf_7psgp4gm_epoc2norm(CYTHON_UNUSED PyObject *__pyx_self,
  */
     __pyx_v_days = (__pyx_v_days + __Pyx_div_long(((__pyx_v_year - 0x76C) - 1), 4));
 
-    /* "psgp4gm.pyx":279
+    /* "psgp4gm.pyx":281
  * 
  *   days = (<int>ddd)-1  # Number of full days passed in this year
  *   if year > 1900:             # <<<<<<<<<<<<<<
@@ -1637,30 +1637,30 @@ static PyObject *__pyx_pf_7psgp4gm_epoc2norm(CYTHON_UNUSED PyObject *__pyx_self,
  */
   }
 
-  /* "psgp4gm.pyx":283
+  /* "psgp4gm.pyx":285
  *     days += (year-1900-1) // 4 # additional days for leap years
  * 
  *   r = days + (ddd - (<int>ddd))             # <<<<<<<<<<<<<<
  *   return r
  * 
  */
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_days); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 283, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_days); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 285, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_v_ddd); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 283, __pyx_L1_error)
-  __pyx_t_4 = __Pyx_PyInt_From_int(((int)__pyx_t_3)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 283, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_v_ddd); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 285, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_int(((int)__pyx_t_3)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 285, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyNumber_Subtract(__pyx_v_ddd, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 283, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Subtract(__pyx_v_ddd, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 285, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Add(__pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 283, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Add(__pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 285, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_6 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_6 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 283, __pyx_L1_error)
+  __pyx_t_6 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_6 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 285, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_r = __pyx_t_6;
 
-  /* "psgp4gm.pyx":284
+  /* "psgp4gm.pyx":286
  * 
  *   r = days + (ddd - (<int>ddd))
  *   return r             # <<<<<<<<<<<<<<
@@ -1668,13 +1668,13 @@ static PyObject *__pyx_pf_7psgp4gm_epoc2norm(CYTHON_UNUSED PyObject *__pyx_self,
  * """
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_r); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 284, __pyx_L1_error)
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_r); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_r = __pyx_t_4;
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "psgp4gm.pyx":269
+  /* "psgp4gm.pyx":271
  *        f..f - is time of the day as a fraction of 24 hours
  * """
  * def epoc2norm(yy, ddd):             # <<<<<<<<<<<<<<
@@ -1695,7 +1695,7 @@ static PyObject *__pyx_pf_7psgp4gm_epoc2norm(CYTHON_UNUSED PyObject *__pyx_self,
   return __pyx_r;
 }
 
-/* "psgp4gm.pyx":292
+/* "psgp4gm.pyx":294
  * """
  * 
  * def init_wgs72(card1, card2, latitude, longitude, height):             # <<<<<<<<<<<<<<
@@ -1747,29 +1747,29 @@ static PyObject *__pyx_pw_7psgp4gm_3init_wgs72(PyObject *__pyx_self, PyObject *_
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_card2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("init_wgs72", 1, 5, 5, 1); __PYX_ERR(0, 292, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("init_wgs72", 1, 5, 5, 1); __PYX_ERR(0, 294, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_latitude)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("init_wgs72", 1, 5, 5, 2); __PYX_ERR(0, 292, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("init_wgs72", 1, 5, 5, 2); __PYX_ERR(0, 294, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_longitude)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("init_wgs72", 1, 5, 5, 3); __PYX_ERR(0, 292, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("init_wgs72", 1, 5, 5, 3); __PYX_ERR(0, 294, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_height)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("init_wgs72", 1, 5, 5, 4); __PYX_ERR(0, 292, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("init_wgs72", 1, 5, 5, 4); __PYX_ERR(0, 294, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "init_wgs72") < 0)) __PYX_ERR(0, 292, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "init_wgs72") < 0)) __PYX_ERR(0, 294, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 5) {
       goto __pyx_L5_argtuple_error;
@@ -1788,7 +1788,7 @@ static PyObject *__pyx_pw_7psgp4gm_3init_wgs72(PyObject *__pyx_self, PyObject *_
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("init_wgs72", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 292, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("init_wgs72", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 294, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("psgp4gm.init_wgs72", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -1828,7 +1828,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("init_wgs72", 0);
 
-  /* "psgp4gm.pyx":314
+  /* "psgp4gm.pyx":316
  *   cdef double j3oj2
  * 
  *   omega = 7.292115146706979e-05             # <<<<<<<<<<<<<<
@@ -1837,49 +1837,49 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   __pyx_v_7psgp4gm_omega = 7.292115146706979e-05;
 
-  /* "psgp4gm.pyx":315
+  /* "psgp4gm.pyx":317
  * 
  *   omega = 7.292115146706979e-05
  *   rlat = latitude * GAL_D2R             # <<<<<<<<<<<<<<
  *   rlon = longitude * GAL_D2R
  *   h    = height
  */
-  __pyx_t_1 = PyFloat_FromDouble(GAL_D2R); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 315, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(GAL_D2R); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 317, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Multiply(__pyx_v_latitude, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 315, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Multiply(__pyx_v_latitude, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 317, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 315, __pyx_L1_error)
+  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 317, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_7psgp4gm_rlat = __pyx_t_3;
 
-  /* "psgp4gm.pyx":316
+  /* "psgp4gm.pyx":318
  *   omega = 7.292115146706979e-05
  *   rlat = latitude * GAL_D2R
  *   rlon = longitude * GAL_D2R             # <<<<<<<<<<<<<<
  *   h    = height
  * 
  */
-  __pyx_t_2 = PyFloat_FromDouble(GAL_D2R); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(GAL_D2R); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 318, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyNumber_Multiply(__pyx_v_longitude, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 316, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_v_longitude, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 318, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 316, __pyx_L1_error)
+  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 318, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_7psgp4gm_rlon = __pyx_t_3;
 
-  /* "psgp4gm.pyx":317
+  /* "psgp4gm.pyx":319
  *   rlat = latitude * GAL_D2R
  *   rlon = longitude * GAL_D2R
  *   h    = height             # <<<<<<<<<<<<<<
  * 
  *   status = gal_stsalloc()
  */
-  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_v_height); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 317, __pyx_L1_error)
+  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_v_height); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 319, __pyx_L1_error)
   __pyx_v_7psgp4gm_h = __pyx_t_3;
 
-  /* "psgp4gm.pyx":319
+  /* "psgp4gm.pyx":321
  *   h    = height
  * 
  *   status = gal_stsalloc()             # <<<<<<<<<<<<<<
@@ -1888,7 +1888,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   __pyx_v_status = gal_stsalloc();
 
-  /* "psgp4gm.pyx":321
+  /* "psgp4gm.pyx":323
  *   status = gal_stsalloc()
  * 
  *   gm72 = gal_gmget_wgs72(180, 180, GAL_NORMALIZED, status)             # <<<<<<<<<<<<<<
@@ -1897,7 +1897,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   __pyx_v_gm72 = gal_gmget_wgs72(0xB4, 0xB4, GAL_NORMALIZED, __pyx_v_status);
 
-  /* "psgp4gm.pyx":322
+  /* "psgp4gm.pyx":324
  * 
  *   gm72 = gal_gmget_wgs72(180, 180, GAL_NORMALIZED, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -1907,26 +1907,26 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_t_4 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_4)) {
 
-    /* "psgp4gm.pyx":323
+    /* "psgp4gm.pyx":325
  *   gm72 = gal_gmget_wgs72(180, 180, GAL_NORMALIZED, status)
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_gmget_wgs72 returned code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  * 
  *   gm = gm72.gm
  */
-    __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 323, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 325, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 323, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 325, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_gmget_wgs72_returned_code, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 323, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_gmget_wgs72_returned_code, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 325, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_1, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 323, __pyx_L1_error)
+    __PYX_ERR(0, 325, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":322
+    /* "psgp4gm.pyx":324
  * 
  *   gm72 = gal_gmget_wgs72(180, 180, GAL_NORMALIZED, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -1935,7 +1935,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   }
 
-  /* "psgp4gm.pyx":325
+  /* "psgp4gm.pyx":327
  *     raise Exception, "gal_gmget_wgs72 returned code " + str(status[0].errc)
  * 
  *   gm = gm72.gm             # <<<<<<<<<<<<<<
@@ -1945,7 +1945,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_t_3 = __pyx_v_gm72->gm;
   __pyx_v_7psgp4gm_gm = __pyx_t_3;
 
-  /* "psgp4gm.pyx":327
+  /* "psgp4gm.pyx":329
  *   gm = gm72.gm
  * 
  *   gal_emparams(GAL_EMEA_WGS1984, &sma, &inf, status)             # <<<<<<<<<<<<<<
@@ -1954,7 +1954,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   gal_emparams(GAL_EMEA_WGS1984, (&__pyx_v_7psgp4gm_sma), (&__pyx_v_7psgp4gm_inf), __pyx_v_status);
 
-  /* "psgp4gm.pyx":328
+  /* "psgp4gm.pyx":330
  * 
  *   gal_emparams(GAL_EMEA_WGS1984, &sma, &inf, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -1964,26 +1964,26 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_t_4 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_4)) {
 
-    /* "psgp4gm.pyx":329
+    /* "psgp4gm.pyx":331
  *   gal_emparams(GAL_EMEA_WGS1984, &sma, &inf, status)
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_emparams returned code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  * 
  *   gal_sgp4gm(gm72, &tumin, &mu, &re, &xke, &j2, &j3, &j4, &j3oj2, status)
  */
-    __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 329, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 331, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 329, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 331, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_emparams_returned_code, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 329, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_emparams_returned_code, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 331, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_1, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 329, __pyx_L1_error)
+    __PYX_ERR(0, 331, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":328
+    /* "psgp4gm.pyx":330
  * 
  *   gal_emparams(GAL_EMEA_WGS1984, &sma, &inf, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -1992,7 +1992,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   }
 
-  /* "psgp4gm.pyx":331
+  /* "psgp4gm.pyx":333
  *     raise Exception, "gal_emparams returned code " + str(status[0].errc)
  * 
  *   gal_sgp4gm(gm72, &tumin, &mu, &re, &xke, &j2, &j3, &j4, &j3oj2, status)             # <<<<<<<<<<<<<<
@@ -2001,7 +2001,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   gal_sgp4gm(__pyx_v_gm72, (&__pyx_v_tumin), (&__pyx_v_7psgp4gm_mu), (&__pyx_v_7psgp4gm_re), (&__pyx_v_xke), (&__pyx_v_j2), (&__pyx_v_j3), (&__pyx_v_j4), (&__pyx_v_j3oj2), __pyx_v_status);
 
-  /* "psgp4gm.pyx":332
+  /* "psgp4gm.pyx":334
  * 
  *   gal_sgp4gm(gm72, &tumin, &mu, &re, &xke, &j2, &j3, &j4, &j3oj2, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -2011,26 +2011,26 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_t_4 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_4)) {
 
-    /* "psgp4gm.pyx":333
+    /* "psgp4gm.pyx":335
  *   gal_sgp4gm(gm72, &tumin, &mu, &re, &xke, &j2, &j3, &j4, &j3oj2, status)
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_sgp4gm returned code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  * 
  *   gal_gd2gce(sma, inf, rlon, rlat, h, observer, status)
  */
-    __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 333, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 335, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 333, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 335, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_sgp4gm_returned_code, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 333, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_sgp4gm_returned_code, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 335, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_1, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 333, __pyx_L1_error)
+    __PYX_ERR(0, 335, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":332
+    /* "psgp4gm.pyx":334
  * 
  *   gal_sgp4gm(gm72, &tumin, &mu, &re, &xke, &j2, &j3, &j4, &j3oj2, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -2039,7 +2039,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   }
 
-  /* "psgp4gm.pyx":335
+  /* "psgp4gm.pyx":337
  *     raise Exception, "gal_sgp4gm returned code " + str(status[0].errc)
  * 
  *   gal_gd2gce(sma, inf, rlon, rlat, h, observer, status)             # <<<<<<<<<<<<<<
@@ -2048,7 +2048,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   gal_gd2gce(__pyx_v_7psgp4gm_sma, __pyx_v_7psgp4gm_inf, __pyx_v_7psgp4gm_rlon, __pyx_v_7psgp4gm_rlat, __pyx_v_7psgp4gm_h, __pyx_v_7psgp4gm_observer, __pyx_v_status);
 
-  /* "psgp4gm.pyx":336
+  /* "psgp4gm.pyx":338
  * 
  *   gal_gd2gce(sma, inf, rlon, rlat, h, observer, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -2058,26 +2058,26 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_t_4 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_4)) {
 
-    /* "psgp4gm.pyx":337
+    /* "psgp4gm.pyx":339
  *   gal_gd2gce(sma, inf, rlon, rlat, h, observer, status)
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_gd2gce returned code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  * 
  *   gal_sezm(rlat, rlon, sez)
  */
-    __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 337, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 339, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 337, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 339, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_gd2gce_returned_code, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 337, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_gd2gce_returned_code, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 339, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_1, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 337, __pyx_L1_error)
+    __PYX_ERR(0, 339, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":336
+    /* "psgp4gm.pyx":338
  * 
  *   gal_gd2gce(sma, inf, rlon, rlat, h, observer, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -2086,7 +2086,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   }
 
-  /* "psgp4gm.pyx":339
+  /* "psgp4gm.pyx":341
  *     raise Exception, "gal_gd2gce returned code " + str(status[0].errc)
  * 
  *   gal_sezm(rlat, rlon, sez)             # <<<<<<<<<<<<<<
@@ -2095,18 +2095,18 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   gal_sezm(__pyx_v_7psgp4gm_rlat, __pyx_v_7psgp4gm_rlon, __pyx_v_7psgp4gm_sez);
 
-  /* "psgp4gm.pyx":341
+  /* "psgp4gm.pyx":343
  *   gal_sezm(rlat, rlon, sez)
  * 
  *   gal_tledec(card1, card2, &tle, status)             # <<<<<<<<<<<<<<
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_tledec returned code " + str(status[0].errc)
  */
-  __pyx_t_5 = __Pyx_PyObject_AsWritableString(__pyx_v_card1); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 341, __pyx_L1_error)
-  __pyx_t_6 = __Pyx_PyObject_AsWritableString(__pyx_v_card2); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_AsWritableString(__pyx_v_card1); if (unlikely((!__pyx_t_5) && PyErr_Occurred())) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_AsWritableString(__pyx_v_card2); if (unlikely((!__pyx_t_6) && PyErr_Occurred())) __PYX_ERR(0, 343, __pyx_L1_error)
   gal_tledec(__pyx_t_5, __pyx_t_6, (&__pyx_v_7psgp4gm_tle), __pyx_v_status);
 
-  /* "psgp4gm.pyx":342
+  /* "psgp4gm.pyx":344
  * 
  *   gal_tledec(card1, card2, &tle, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -2116,26 +2116,26 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_t_4 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_4)) {
 
-    /* "psgp4gm.pyx":343
+    /* "psgp4gm.pyx":345
  *   gal_tledec(card1, card2, &tle, status)
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_tledec returned code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  * 
  *   # Convert TLE epoc time to normalized form
  */
-    __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 343, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 345, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 343, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 345, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_tledec_returned_code, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 343, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_tledec_returned_code, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 345, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_1, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 343, __pyx_L1_error)
+    __PYX_ERR(0, 345, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":342
+    /* "psgp4gm.pyx":344
  * 
  *   gal_tledec(card1, card2, &tle, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -2144,18 +2144,18 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   }
 
-  /* "psgp4gm.pyx":346
+  /* "psgp4gm.pyx":348
  * 
  *   # Convert TLE epoc time to normalized form
  *   tle_norm_epoc = epoc2norm(tle.epochyr, tle.epochdays)             # <<<<<<<<<<<<<<
  * 
  *   gal_sgp4init(gm72, &tle, &sgp4orig, status)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_epoc2norm); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 346, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_epoc2norm); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 348, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_7psgp4gm_tle.epochyr); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 346, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_7psgp4gm_tle.epochyr); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 348, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_7psgp4gm_tle.epochdays); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 346, __pyx_L1_error)
+  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_7psgp4gm_tle.epochdays); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 348, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __pyx_t_9 = NULL;
   __pyx_t_10 = 0;
@@ -2172,7 +2172,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_9, __pyx_t_7, __pyx_t_8};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -2182,7 +2182,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_9, __pyx_t_7, __pyx_t_8};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_10, 2+__pyx_t_10); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -2190,7 +2190,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
   } else
   #endif
   {
-    __pyx_t_11 = PyTuple_New(2+__pyx_t_10); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 346, __pyx_L1_error)
+    __pyx_t_11 = PyTuple_New(2+__pyx_t_10); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_11);
     if (__pyx_t_9) {
       __Pyx_GIVEREF(__pyx_t_9); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_9); __pyx_t_9 = NULL;
@@ -2201,16 +2201,16 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
     PyTuple_SET_ITEM(__pyx_t_11, 1+__pyx_t_10, __pyx_t_8);
     __pyx_t_7 = 0;
     __pyx_t_8 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_11, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_11, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 348, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 346, __pyx_L1_error)
+  __pyx_t_3 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 348, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_7psgp4gm_tle_norm_epoc = __pyx_t_3;
 
-  /* "psgp4gm.pyx":348
+  /* "psgp4gm.pyx":350
  *   tle_norm_epoc = epoc2norm(tle.epochyr, tle.epochdays)
  * 
  *   gal_sgp4init(gm72, &tle, &sgp4orig, status)             # <<<<<<<<<<<<<<
@@ -2219,7 +2219,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   gal_sgp4init(__pyx_v_gm72, (&__pyx_v_7psgp4gm_tle), (&__pyx_v_7psgp4gm_sgp4orig), __pyx_v_status);
 
-  /* "psgp4gm.pyx":349
+  /* "psgp4gm.pyx":351
  * 
  *   gal_sgp4init(gm72, &tle, &sgp4orig, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -2229,26 +2229,26 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_t_4 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_4)) {
 
-    /* "psgp4gm.pyx":350
+    /* "psgp4gm.pyx":352
  *   gal_sgp4init(gm72, &tle, &sgp4orig, status)
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_sgp4init returned code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  * 
  *   gal_gmfree(gm72)
  */
-    __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 350, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 350, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 352, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_sgp4init_returned_code, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 350, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_sgp4init_returned_code, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_1, 0, 0);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __PYX_ERR(0, 350, __pyx_L1_error)
+    __PYX_ERR(0, 352, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":349
+    /* "psgp4gm.pyx":351
  * 
  *   gal_sgp4init(gm72, &tle, &sgp4orig, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -2257,7 +2257,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   }
 
-  /* "psgp4gm.pyx":352
+  /* "psgp4gm.pyx":354
  *     raise Exception, "gal_sgp4init returned code " + str(status[0].errc)
  * 
  *   gal_gmfree(gm72)             # <<<<<<<<<<<<<<
@@ -2266,7 +2266,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   gal_gmfree(__pyx_v_gm72);
 
-  /* "psgp4gm.pyx":353
+  /* "psgp4gm.pyx":355
  * 
  *   gal_gmfree(gm72)
  *   sgp4 = sgp4orig             # <<<<<<<<<<<<<<
@@ -2275,7 +2275,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   __pyx_v_7psgp4gm_sgp4 = __pyx_v_7psgp4gm_sgp4orig;
 
-  /* "psgp4gm.pyx":355
+  /* "psgp4gm.pyx":357
  *   sgp4 = sgp4orig
  * 
  *   gal_stsfree(status)             # <<<<<<<<<<<<<<
@@ -2284,7 +2284,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
  */
   gal_stsfree(__pyx_v_status);
 
-  /* "psgp4gm.pyx":357
+  /* "psgp4gm.pyx":359
  *   gal_stsfree(status)
  * 
  *   return             # <<<<<<<<<<<<<<
@@ -2295,7 +2295,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_r = Py_None; __Pyx_INCREF(Py_None);
   goto __pyx_L0;
 
-  /* "psgp4gm.pyx":292
+  /* "psgp4gm.pyx":294
  * """
  * 
  * def init_wgs72(card1, card2, latitude, longitude, height):             # <<<<<<<<<<<<<<
@@ -2319,7 +2319,7 @@ static PyObject *__pyx_pf_7psgp4gm_2init_wgs72(CYTHON_UNUSED PyObject *__pyx_sel
   return __pyx_r;
 }
 
-/* "psgp4gm.pyx":365
+/* "psgp4gm.pyx":367
  * """
  * 
  * def get_position(y, m, d, hh, mm, ss):             # <<<<<<<<<<<<<<
@@ -2374,35 +2374,35 @@ static PyObject *__pyx_pw_7psgp4gm_5get_position(PyObject *__pyx_self, PyObject 
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_m)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("get_position", 1, 6, 6, 1); __PYX_ERR(0, 365, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("get_position", 1, 6, 6, 1); __PYX_ERR(0, 367, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("get_position", 1, 6, 6, 2); __PYX_ERR(0, 365, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("get_position", 1, 6, 6, 2); __PYX_ERR(0, 367, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_hh)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("get_position", 1, 6, 6, 3); __PYX_ERR(0, 365, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("get_position", 1, 6, 6, 3); __PYX_ERR(0, 367, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_mm)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("get_position", 1, 6, 6, 4); __PYX_ERR(0, 365, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("get_position", 1, 6, 6, 4); __PYX_ERR(0, 367, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_ss)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("get_position", 1, 6, 6, 5); __PYX_ERR(0, 365, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("get_position", 1, 6, 6, 5); __PYX_ERR(0, 367, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get_position") < 0)) __PYX_ERR(0, 365, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "get_position") < 0)) __PYX_ERR(0, 367, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 6) {
       goto __pyx_L5_argtuple_error;
@@ -2423,7 +2423,7 @@ static PyObject *__pyx_pw_7psgp4gm_5get_position(PyObject *__pyx_self, PyObject 
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("get_position", 1, 6, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 365, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("get_position", 1, 6, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 367, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("psgp4gm.get_position", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -2475,7 +2475,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("get_position", 0);
 
-  /* "psgp4gm.pyx":390
+  /* "psgp4gm.pyx":392
  *   cdef int hr, min, sec
  * 
  *   status = gal_stsalloc()             # <<<<<<<<<<<<<<
@@ -2484,67 +2484,67 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   __pyx_v_status = gal_stsalloc();
 
-  /* "psgp4gm.pyx":392
+  /* "psgp4gm.pyx":394
  *   status = gal_stsalloc()
  * 
  *   year = y             # <<<<<<<<<<<<<<
  *   month = m
  *   day = d
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_y); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 392, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_y); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 394, __pyx_L1_error)
   __pyx_v_year = __pyx_t_1;
 
-  /* "psgp4gm.pyx":393
+  /* "psgp4gm.pyx":395
  * 
  *   year = y
  *   month = m             # <<<<<<<<<<<<<<
  *   day = d
  *   hr = hh
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_m); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 393, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_m); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 395, __pyx_L1_error)
   __pyx_v_month = __pyx_t_1;
 
-  /* "psgp4gm.pyx":394
+  /* "psgp4gm.pyx":396
  *   year = y
  *   month = m
  *   day = d             # <<<<<<<<<<<<<<
  *   hr = hh
  *   min = mm
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_d); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 394, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_d); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 396, __pyx_L1_error)
   __pyx_v_day = __pyx_t_1;
 
-  /* "psgp4gm.pyx":395
+  /* "psgp4gm.pyx":397
  *   month = m
  *   day = d
  *   hr = hh             # <<<<<<<<<<<<<<
  *   min = mm
  *   sec = ss
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_hh); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 395, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_hh); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 397, __pyx_L1_error)
   __pyx_v_hr = __pyx_t_1;
 
-  /* "psgp4gm.pyx":396
+  /* "psgp4gm.pyx":398
  *   day = d
  *   hr = hh
  *   min = mm             # <<<<<<<<<<<<<<
  *   sec = ss
  * 
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_mm); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 396, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_mm); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 398, __pyx_L1_error)
   __pyx_v_min = __pyx_t_1;
 
-  /* "psgp4gm.pyx":397
+  /* "psgp4gm.pyx":399
  *   hr = hh
  *   min = mm
  *   sec = ss             # <<<<<<<<<<<<<<
  * 
  *   gal_cal2jd(year, month, day, &e1, &e2, status)
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_ss); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 397, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_ss); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 399, __pyx_L1_error)
   __pyx_v_sec = __pyx_t_1;
 
-  /* "psgp4gm.pyx":399
+  /* "psgp4gm.pyx":401
  *   sec = ss
  * 
  *   gal_cal2jd(year, month, day, &e1, &e2, status)             # <<<<<<<<<<<<<<
@@ -2553,7 +2553,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   gal_cal2jd(__pyx_v_year, __pyx_v_month, __pyx_v_day, (&__pyx_v_e1), (&__pyx_v_e2), __pyx_v_status);
 
-  /* "psgp4gm.pyx":400
+  /* "psgp4gm.pyx":402
  * 
  *   gal_cal2jd(year, month, day, &e1, &e2, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -2563,26 +2563,26 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_2 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_2)) {
 
-    /* "psgp4gm.pyx":401
+    /* "psgp4gm.pyx":403
  *   gal_cal2jd(year, month, day, &e1, &e2, status)
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_cal2jd returned code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  * 
  *   e2 = e2 + hr / 24.0 + min / 24.0 / 60.0 + sec / 24.0 /60.0 / 60.0
  */
-    __pyx_t_3 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 401, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 403, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 401, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 403, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_cal2jd_returned_code, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 401, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_cal2jd_returned_code, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 403, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_3, 0, 0);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __PYX_ERR(0, 401, __pyx_L1_error)
+    __PYX_ERR(0, 403, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":400
+    /* "psgp4gm.pyx":402
  * 
  *   gal_cal2jd(year, month, day, &e1, &e2, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -2591,7 +2591,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   }
 
-  /* "psgp4gm.pyx":403
+  /* "psgp4gm.pyx":405
  *     raise Exception, "gal_cal2jd returned code " + str(status[0].errc)
  * 
  *   e2 = e2 + hr / 24.0 + min / 24.0 / 60.0 + sec / 24.0 /60.0 / 60.0             # <<<<<<<<<<<<<<
@@ -2600,7 +2600,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   __pyx_v_e2 = (((__pyx_v_e2 + (((double)__pyx_v_hr) / 24.0)) + ((((double)__pyx_v_min) / 24.0) / 60.0)) + (((((double)__pyx_v_sec) / 24.0) / 60.0) / 60.0));
 
-  /* "psgp4gm.pyx":405
+  /* "psgp4gm.pyx":407
  *   e2 = e2 + hr / 24.0 + min / 24.0 / 60.0 + sec / 24.0 /60.0 / 60.0
  * 
  *   gal_sgp4(&sgp4, e1, e2, pv, status)             # <<<<<<<<<<<<<<
@@ -2609,7 +2609,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   gal_sgp4((&__pyx_v_7psgp4gm_sgp4), __pyx_v_e1, __pyx_v_e2, __pyx_v_pv, __pyx_v_status);
 
-  /* "psgp4gm.pyx":406
+  /* "psgp4gm.pyx":408
  * 
  *   gal_sgp4(&sgp4, e1, e2, pv, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -2619,26 +2619,26 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_2 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_2)) {
 
-    /* "psgp4gm.pyx":407
+    /* "psgp4gm.pyx":409
  *   gal_sgp4(&sgp4, e1, e2, pv, status)
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_sgp4 returned code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  * 
  *   gal_me2bf(pv, gal_gmst82(e1, e2), omega, efg)
  */
-    __pyx_t_3 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 407, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 409, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 407, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 409, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_sgp4_returned_code, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 407, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_sgp4_returned_code, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 409, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_3, 0, 0);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __PYX_ERR(0, 407, __pyx_L1_error)
+    __PYX_ERR(0, 409, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":406
+    /* "psgp4gm.pyx":408
  * 
  *   gal_sgp4(&sgp4, e1, e2, pv, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -2647,7 +2647,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   }
 
-  /* "psgp4gm.pyx":409
+  /* "psgp4gm.pyx":411
  *     raise Exception, "gal_sgp4 returned code " + str(status[0].errc)
  * 
  *   gal_me2bf(pv, gal_gmst82(e1, e2), omega, efg)             # <<<<<<<<<<<<<<
@@ -2656,7 +2656,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   gal_me2bf(__pyx_v_pv, gal_gmst82(__pyx_v_e1, __pyx_v_e2), __pyx_v_7psgp4gm_omega, __pyx_v_efg);
 
-  /* "psgp4gm.pyx":410
+  /* "psgp4gm.pyx":412
  * 
  *   gal_me2bf(pv, gal_gmst82(e1, e2), omega, efg)
  *   gal_pmp(efg[0], observer, sr)             # <<<<<<<<<<<<<<
@@ -2665,7 +2665,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   gal_pmp((__pyx_v_efg[0]), __pyx_v_7psgp4gm_observer, __pyx_v_sr);
 
-  /* "psgp4gm.pyx":412
+  /* "psgp4gm.pyx":414
  *   gal_pmp(efg[0], observer, sr)
  * 
  *   gal_pn(sr, &srmod, srunit)             # <<<<<<<<<<<<<<
@@ -2674,7 +2674,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   gal_pn(__pyx_v_sr, (&__pyx_v_srmod), __pyx_v_srunit);
 
-  /* "psgp4gm.pyx":413
+  /* "psgp4gm.pyx":415
  * 
  *   gal_pn(sr, &srmod, srunit)
  *   gal_rxp(sez, sr, rho)             # <<<<<<<<<<<<<<
@@ -2683,7 +2683,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   gal_rxp(__pyx_v_7psgp4gm_sez, __pyx_v_sr, __pyx_v_rho);
 
-  /* "psgp4gm.pyx":415
+  /* "psgp4gm.pyx":417
  *   gal_rxp(sez, sr, rho)
  * 
  *   az  = atan2(rho[1], -rho[0])             # <<<<<<<<<<<<<<
@@ -2692,7 +2692,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   __pyx_v_az = atan2((__pyx_v_rho[1]), (-(__pyx_v_rho[0])));
 
-  /* "psgp4gm.pyx":416
+  /* "psgp4gm.pyx":418
  * 
  *   az  = atan2(rho[1], -rho[0])
  *   dist = gal_pm(sr)             # <<<<<<<<<<<<<<
@@ -2701,7 +2701,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   __pyx_v_dist = gal_pm(__pyx_v_sr);
 
-  /* "psgp4gm.pyx":417
+  /* "psgp4gm.pyx":419
  *   az  = atan2(rho[1], -rho[0])
  *   dist = gal_pm(sr)
  *   sel = rho[2] / dist             # <<<<<<<<<<<<<<
@@ -2710,11 +2710,11 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   if (unlikely(__pyx_v_dist == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 417, __pyx_L1_error)
+    __PYX_ERR(0, 419, __pyx_L1_error)
   }
   __pyx_v_sel = ((__pyx_v_rho[2]) / __pyx_v_dist);
 
-  /* "psgp4gm.pyx":419
+  /* "psgp4gm.pyx":421
  *   sel = rho[2] / dist
  * 
  *   if (fabs(sel) > 1.0):             # <<<<<<<<<<<<<<
@@ -2724,7 +2724,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_2 = ((fabs(__pyx_v_sel) > 1.0) != 0);
   if (__pyx_t_2) {
 
-    /* "psgp4gm.pyx":420
+    /* "psgp4gm.pyx":422
  * 
  *   if (fabs(sel) > 1.0):
  *     sel = sel / fabs(sel)             # <<<<<<<<<<<<<<
@@ -2734,11 +2734,11 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
     __pyx_t_5 = fabs(__pyx_v_sel);
     if (unlikely(__pyx_t_5 == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 420, __pyx_L1_error)
+      __PYX_ERR(0, 422, __pyx_L1_error)
     }
     __pyx_v_sel = (__pyx_v_sel / __pyx_t_5);
 
-    /* "psgp4gm.pyx":419
+    /* "psgp4gm.pyx":421
  *   sel = rho[2] / dist
  * 
  *   if (fabs(sel) > 1.0):             # <<<<<<<<<<<<<<
@@ -2747,7 +2747,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   }
 
-  /* "psgp4gm.pyx":422
+  /* "psgp4gm.pyx":424
  *     sel = sel / fabs(sel)
  * 
  *   elev = asin(sel)             # <<<<<<<<<<<<<<
@@ -2756,7 +2756,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   __pyx_v_elev = asin(__pyx_v_sel);
 
-  /* "psgp4gm.pyx":424
+  /* "psgp4gm.pyx":426
  *   elev = asin(sel)
  * 
  *   az = gal_anp(az)             # <<<<<<<<<<<<<<
@@ -2765,7 +2765,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   __pyx_v_az = gal_anp(__pyx_v_az);
 
-  /* "psgp4gm.pyx":425
+  /* "psgp4gm.pyx":427
  * 
  *   az = gal_anp(az)
  *   elev = gal_anpm(elev)             # <<<<<<<<<<<<<<
@@ -2774,7 +2774,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   __pyx_v_elev = gal_anpm(__pyx_v_elev);
 
-  /* "psgp4gm.pyx":427
+  /* "psgp4gm.pyx":429
  *   elev = gal_anpm(elev)
  * 
  *   gal_stsfree(status)             # <<<<<<<<<<<<<<
@@ -2783,7 +2783,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   gal_stsfree(__pyx_v_status);
 
-  /* "psgp4gm.pyx":428
+  /* "psgp4gm.pyx":430
  * 
  *   gal_stsfree(status)
  *   return (e1, e2, az * GAL_R2D, elev * GAL_R2D, sr[0], sr[1], sr[2], dist)             # <<<<<<<<<<<<<<
@@ -2791,23 +2791,23 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_e1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_e1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_e2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_4 = PyFloat_FromDouble(__pyx_v_e2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_6 = PyFloat_FromDouble((__pyx_v_az * GAL_R2D)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_6 = PyFloat_FromDouble((__pyx_v_az * GAL_R2D)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = PyFloat_FromDouble((__pyx_v_elev * GAL_R2D)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_7 = PyFloat_FromDouble((__pyx_v_elev * GAL_R2D)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = PyFloat_FromDouble((__pyx_v_sr[0])); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_8 = PyFloat_FromDouble((__pyx_v_sr[0])); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_9 = PyFloat_FromDouble((__pyx_v_sr[1])); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_9 = PyFloat_FromDouble((__pyx_v_sr[1])); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_10 = PyFloat_FromDouble((__pyx_v_sr[2])); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_10 = PyFloat_FromDouble((__pyx_v_sr[2])); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_dist); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_dist); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_12 = PyTuple_New(8); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_12 = PyTuple_New(8); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_12, 0, __pyx_t_3);
@@ -2837,7 +2837,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_12 = 0;
   goto __pyx_L0;
 
-  /* "psgp4gm.pyx":365
+  /* "psgp4gm.pyx":367
  * """
  * 
  * def get_position(y, m, d, hh, mm, ss):             # <<<<<<<<<<<<<<
@@ -2864,7 +2864,7 @@ static PyObject *__pyx_pf_7psgp4gm_4get_position(CYTHON_UNUSED PyObject *__pyx_s
   return __pyx_r;
 }
 
-/* "psgp4gm.pyx":438
+/* "psgp4gm.pyx":440
  * """
  * 
  * def find_rise_set(y, m, d, hh, mm, ss, minel, daysfwd):             # <<<<<<<<<<<<<<
@@ -2925,47 +2925,47 @@ static PyObject *__pyx_pw_7psgp4gm_7find_rise_set(PyObject *__pyx_self, PyObject
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_m)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("find_rise_set", 1, 8, 8, 1); __PYX_ERR(0, 438, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("find_rise_set", 1, 8, 8, 1); __PYX_ERR(0, 440, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("find_rise_set", 1, 8, 8, 2); __PYX_ERR(0, 438, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("find_rise_set", 1, 8, 8, 2); __PYX_ERR(0, 440, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_hh)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("find_rise_set", 1, 8, 8, 3); __PYX_ERR(0, 438, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("find_rise_set", 1, 8, 8, 3); __PYX_ERR(0, 440, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_mm)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("find_rise_set", 1, 8, 8, 4); __PYX_ERR(0, 438, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("find_rise_set", 1, 8, 8, 4); __PYX_ERR(0, 440, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_ss)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("find_rise_set", 1, 8, 8, 5); __PYX_ERR(0, 438, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("find_rise_set", 1, 8, 8, 5); __PYX_ERR(0, 440, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
         if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_minel)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("find_rise_set", 1, 8, 8, 6); __PYX_ERR(0, 438, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("find_rise_set", 1, 8, 8, 6); __PYX_ERR(0, 440, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
         if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_daysfwd)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("find_rise_set", 1, 8, 8, 7); __PYX_ERR(0, 438, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("find_rise_set", 1, 8, 8, 7); __PYX_ERR(0, 440, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "find_rise_set") < 0)) __PYX_ERR(0, 438, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "find_rise_set") < 0)) __PYX_ERR(0, 440, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 8) {
       goto __pyx_L5_argtuple_error;
@@ -2990,7 +2990,7 @@ static PyObject *__pyx_pw_7psgp4gm_7find_rise_set(PyObject *__pyx_self, PyObject
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("find_rise_set", 1, 8, 8, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 438, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("find_rise_set", 1, 8, 8, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 440, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("psgp4gm.find_rise_set", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3062,67 +3062,67 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("find_rise_set", 0);
 
-  /* "psgp4gm.pyx":463
+  /* "psgp4gm.pyx":465
  *   cdef double epoch1, epoch2
  * 
  *   year = y             # <<<<<<<<<<<<<<
  *   month = m
  *   day = d
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_y); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 463, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_y); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 465, __pyx_L1_error)
   __pyx_v_year = __pyx_t_1;
 
-  /* "psgp4gm.pyx":464
+  /* "psgp4gm.pyx":466
  * 
  *   year = y
  *   month = m             # <<<<<<<<<<<<<<
  *   day = d
  *   hr = hh
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_m); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_m); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 466, __pyx_L1_error)
   __pyx_v_month = __pyx_t_1;
 
-  /* "psgp4gm.pyx":465
+  /* "psgp4gm.pyx":467
  *   year = y
  *   month = m
  *   day = d             # <<<<<<<<<<<<<<
  *   hr = hh
  *   min = mm
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_d); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 465, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_d); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 467, __pyx_L1_error)
   __pyx_v_day = __pyx_t_1;
 
-  /* "psgp4gm.pyx":466
+  /* "psgp4gm.pyx":468
  *   month = m
  *   day = d
  *   hr = hh             # <<<<<<<<<<<<<<
  *   min = mm
  *   sec = ss
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_hh); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 466, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_hh); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 468, __pyx_L1_error)
   __pyx_v_hr = __pyx_t_1;
 
-  /* "psgp4gm.pyx":467
+  /* "psgp4gm.pyx":469
  *   day = d
  *   hr = hh
  *   min = mm             # <<<<<<<<<<<<<<
  *   sec = ss
  * 
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_mm); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_mm); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 469, __pyx_L1_error)
   __pyx_v_min = __pyx_t_1;
 
-  /* "psgp4gm.pyx":468
+  /* "psgp4gm.pyx":470
  *   hr = hh
  *   min = mm
  *   sec = ss             # <<<<<<<<<<<<<<
  * 
  *   status = gal_stsalloc()
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_ss); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 468, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_ss); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 470, __pyx_L1_error)
   __pyx_v_sec = __pyx_t_1;
 
-  /* "psgp4gm.pyx":470
+  /* "psgp4gm.pyx":472
  *   sec = ss
  * 
  *   status = gal_stsalloc()             # <<<<<<<<<<<<<<
@@ -3131,7 +3131,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   __pyx_v_status = gal_stsalloc();
 
-  /* "psgp4gm.pyx":472
+  /* "psgp4gm.pyx":474
  *   status = gal_stsalloc()
  * 
  *   gal_cal2jd(year, month, day, &epoch1, &epoch2, status)             # <<<<<<<<<<<<<<
@@ -3140,7 +3140,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   gal_cal2jd(__pyx_v_year, __pyx_v_month, __pyx_v_day, (&__pyx_v_epoch1), (&__pyx_v_epoch2), __pyx_v_status);
 
-  /* "psgp4gm.pyx":473
+  /* "psgp4gm.pyx":475
  * 
  *   gal_cal2jd(year, month, day, &epoch1, &epoch2, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -3150,26 +3150,26 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_2 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_2)) {
 
-    /* "psgp4gm.pyx":474
+    /* "psgp4gm.pyx":476
  *   gal_cal2jd(year, month, day, &epoch1, &epoch2, status)
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_cal2jd returned code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  * 
  *   epoch2 = epoch2 + hr / 24.0 + min / 24.0 / 60.0 + sec / 24.0 /60.0 / 60.0
  */
-    __pyx_t_3 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 474, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 476, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 474, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 476, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_cal2jd_returned_code, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 474, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_cal2jd_returned_code, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 476, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_3, 0, 0);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __PYX_ERR(0, 474, __pyx_L1_error)
+    __PYX_ERR(0, 476, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":473
+    /* "psgp4gm.pyx":475
  * 
  *   gal_cal2jd(year, month, day, &epoch1, &epoch2, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -3178,7 +3178,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   }
 
-  /* "psgp4gm.pyx":476
+  /* "psgp4gm.pyx":478
  *     raise Exception, "gal_cal2jd returned code " + str(status[0].errc)
  * 
  *   epoch2 = epoch2 + hr / 24.0 + min / 24.0 / 60.0 + sec / 24.0 /60.0 / 60.0             # <<<<<<<<<<<<<<
@@ -3187,7 +3187,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   __pyx_v_epoch2 = (((__pyx_v_epoch2 + (((double)__pyx_v_hr) / 24.0)) + ((((double)__pyx_v_min) / 24.0) / 60.0)) + (((((double)__pyx_v_sec) / 24.0) / 60.0) / 60.0));
 
-  /* "psgp4gm.pyx":478
+  /* "psgp4gm.pyx":480
  *   epoch2 = epoch2 + hr / 24.0 + min / 24.0 / 60.0 + sec / 24.0 /60.0 / 60.0
  * 
  *   sgp4l = sgp4orig             # <<<<<<<<<<<<<<
@@ -3196,33 +3196,33 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   __pyx_v_sgp4l = __pyx_v_7psgp4gm_sgp4orig;
 
-  /* "psgp4gm.pyx":480
+  /* "psgp4gm.pyx":482
  *   sgp4l = sgp4orig
  * 
  *   rminel     = minel * GAL_D2R             # <<<<<<<<<<<<<<
  *   days       = daysfwd
  * 
  */
-  __pyx_t_3 = PyFloat_FromDouble(GAL_D2R); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 480, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(GAL_D2R); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 482, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyNumber_Multiply(__pyx_v_minel, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 480, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Multiply(__pyx_v_minel, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 482, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 480, __pyx_L1_error)
+  __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_t_4); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 482, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_rminel = __pyx_t_5;
 
-  /* "psgp4gm.pyx":481
+  /* "psgp4gm.pyx":483
  * 
  *   rminel     = minel * GAL_D2R
  *   days       = daysfwd             # <<<<<<<<<<<<<<
  * 
  *   gal_sgp4rs(epoch1, epoch2, rlat, rlon, h, rminel, days, gm, sma, 1.0 / inf, &sgp4l, passinfo, status)
  */
-  __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_v_daysfwd); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 481, __pyx_L1_error)
+  __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_v_daysfwd); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 483, __pyx_L1_error)
   __pyx_v_days = __pyx_t_5;
 
-  /* "psgp4gm.pyx":483
+  /* "psgp4gm.pyx":485
  *   days       = daysfwd
  * 
  *   gal_sgp4rs(epoch1, epoch2, rlat, rlon, h, rminel, days, gm, sma, 1.0 / inf, &sgp4l, passinfo, status)             # <<<<<<<<<<<<<<
@@ -3231,11 +3231,11 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   if (unlikely(__pyx_v_7psgp4gm_inf == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 483, __pyx_L1_error)
+    __PYX_ERR(0, 485, __pyx_L1_error)
   }
   gal_sgp4rs(__pyx_v_epoch1, __pyx_v_epoch2, __pyx_v_7psgp4gm_rlat, __pyx_v_7psgp4gm_rlon, __pyx_v_7psgp4gm_h, __pyx_v_rminel, __pyx_v_days, __pyx_v_7psgp4gm_gm, __pyx_v_7psgp4gm_sma, (1.0 / __pyx_v_7psgp4gm_inf), (&__pyx_v_sgp4l), __pyx_v_passinfo, __pyx_v_status);
 
-  /* "psgp4gm.pyx":484
+  /* "psgp4gm.pyx":486
  * 
  *   gal_sgp4rs(epoch1, epoch2, rlat, rlon, h, rminel, days, gm, sma, 1.0 / inf, &sgp4l, passinfo, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -3245,26 +3245,26 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_2 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_2)) {
 
-    /* "psgp4gm.pyx":485
+    /* "psgp4gm.pyx":487
  *   gal_sgp4rs(epoch1, epoch2, rlat, rlon, h, rminel, days, gm, sma, 1.0 / inf, &sgp4l, passinfo, status)
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_sgp4rs returned code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  * 
  *   gal_jd2cal(passinfo[0][0], 0.0, &iy1, &im1, &id1, &time1, status)
  */
-    __pyx_t_4 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 485, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 487, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 485, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 487, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_sgp4rs_returned_code, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 485, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_sgp4rs_returned_code, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 487, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_4, 0, 0);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __PYX_ERR(0, 485, __pyx_L1_error)
+    __PYX_ERR(0, 487, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":484
+    /* "psgp4gm.pyx":486
  * 
  *   gal_sgp4rs(epoch1, epoch2, rlat, rlon, h, rminel, days, gm, sma, 1.0 / inf, &sgp4l, passinfo, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -3273,7 +3273,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   }
 
-  /* "psgp4gm.pyx":487
+  /* "psgp4gm.pyx":489
  *     raise Exception, "gal_sgp4rs returned code " + str(status[0].errc)
  * 
  *   gal_jd2cal(passinfo[0][0], 0.0, &iy1, &im1, &id1, &time1, status)             # <<<<<<<<<<<<<<
@@ -3282,7 +3282,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   gal_jd2cal(((__pyx_v_passinfo[0])[0]), 0.0, (&__pyx_v_iy1), (&__pyx_v_im1), (&__pyx_v_id1), (&__pyx_v_time1), __pyx_v_status);
 
-  /* "psgp4gm.pyx":488
+  /* "psgp4gm.pyx":490
  * 
  *   gal_jd2cal(passinfo[0][0], 0.0, &iy1, &im1, &id1, &time1, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -3292,26 +3292,26 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_2 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_2)) {
 
-    /* "psgp4gm.pyx":489
+    /* "psgp4gm.pyx":491
  *   gal_jd2cal(passinfo[0][0], 0.0, &iy1, &im1, &id1, &time1, status)
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_jd2cal returned code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  *   ihh1 = (int)(24.0 * time1)
  *   imm1 = (int)((time1 * 24.0 - ihh1) * 60.0)
  */
-    __pyx_t_4 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 489, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 491, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 489, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 491, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_jd2cal_returned_code, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 489, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_jd2cal_returned_code, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 491, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_4, 0, 0);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __PYX_ERR(0, 489, __pyx_L1_error)
+    __PYX_ERR(0, 491, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":488
+    /* "psgp4gm.pyx":490
  * 
  *   gal_jd2cal(passinfo[0][0], 0.0, &iy1, &im1, &id1, &time1, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -3320,7 +3320,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   }
 
-  /* "psgp4gm.pyx":490
+  /* "psgp4gm.pyx":492
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_jd2cal returned code " + str(status[0].errc)
  *   ihh1 = (int)(24.0 * time1)             # <<<<<<<<<<<<<<
@@ -3329,7 +3329,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   __pyx_v_ihh1 = ((int)(24.0 * __pyx_v_time1));
 
-  /* "psgp4gm.pyx":491
+  /* "psgp4gm.pyx":493
  *     raise Exception, "gal_jd2cal returned code " + str(status[0].errc)
  *   ihh1 = (int)(24.0 * time1)
  *   imm1 = (int)((time1 * 24.0 - ihh1) * 60.0)             # <<<<<<<<<<<<<<
@@ -3338,7 +3338,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   __pyx_v_imm1 = ((int)(((__pyx_v_time1 * 24.0) - __pyx_v_ihh1) * 60.0));
 
-  /* "psgp4gm.pyx":492
+  /* "psgp4gm.pyx":494
  *   ihh1 = (int)(24.0 * time1)
  *   imm1 = (int)((time1 * 24.0 - ihh1) * 60.0)
  *   iss1 = (int)((time1 * 24.0 * 60.0  - ihh1 * 60.0 - imm1) * 60.0)             # <<<<<<<<<<<<<<
@@ -3347,7 +3347,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   __pyx_v_iss1 = ((int)(((((__pyx_v_time1 * 24.0) * 60.0) - (__pyx_v_ihh1 * 60.0)) - __pyx_v_imm1) * 60.0));
 
-  /* "psgp4gm.pyx":494
+  /* "psgp4gm.pyx":496
  *   iss1 = (int)((time1 * 24.0 * 60.0  - ihh1 * 60.0 - imm1) * 60.0)
  * 
  *   gal_jd2cal(passinfo[1][0], 0.0, &iy2, &im2, &id2, &time2, status)             # <<<<<<<<<<<<<<
@@ -3356,7 +3356,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   gal_jd2cal(((__pyx_v_passinfo[1])[0]), 0.0, (&__pyx_v_iy2), (&__pyx_v_im2), (&__pyx_v_id2), (&__pyx_v_time2), __pyx_v_status);
 
-  /* "psgp4gm.pyx":495
+  /* "psgp4gm.pyx":497
  * 
  *   gal_jd2cal(passinfo[1][0], 0.0, &iy2, &im2, &id2, &time2, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -3366,26 +3366,26 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_2 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_2)) {
 
-    /* "psgp4gm.pyx":496
+    /* "psgp4gm.pyx":498
  *   gal_jd2cal(passinfo[1][0], 0.0, &iy2, &im2, &id2, &time2, status)
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_jd2cal returned code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  *   ihh2 = (int)(24.0 * time2)
  *   imm2 = (int)((time2 * 24.0 - ihh2) * 60.0)
  */
-    __pyx_t_4 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 496, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 498, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 496, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 498, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_jd2cal_returned_code, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 496, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_jd2cal_returned_code, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 498, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_4, 0, 0);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __PYX_ERR(0, 496, __pyx_L1_error)
+    __PYX_ERR(0, 498, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":495
+    /* "psgp4gm.pyx":497
  * 
  *   gal_jd2cal(passinfo[1][0], 0.0, &iy2, &im2, &id2, &time2, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -3394,7 +3394,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   }
 
-  /* "psgp4gm.pyx":497
+  /* "psgp4gm.pyx":499
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_jd2cal returned code " + str(status[0].errc)
  *   ihh2 = (int)(24.0 * time2)             # <<<<<<<<<<<<<<
@@ -3403,7 +3403,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   __pyx_v_ihh2 = ((int)(24.0 * __pyx_v_time2));
 
-  /* "psgp4gm.pyx":498
+  /* "psgp4gm.pyx":500
  *     raise Exception, "gal_jd2cal returned code " + str(status[0].errc)
  *   ihh2 = (int)(24.0 * time2)
  *   imm2 = (int)((time2 * 24.0 - ihh2) * 60.0)             # <<<<<<<<<<<<<<
@@ -3412,7 +3412,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   __pyx_v_imm2 = ((int)(((__pyx_v_time2 * 24.0) - __pyx_v_ihh2) * 60.0));
 
-  /* "psgp4gm.pyx":499
+  /* "psgp4gm.pyx":501
  *   ihh2 = (int)(24.0 * time2)
  *   imm2 = (int)((time2 * 24.0 - ihh2) * 60.0)
  *   iss2 = (int)((time2 * 24.0 * 60.0  - ihh2 * 60.0 - imm2) * 60.0)             # <<<<<<<<<<<<<<
@@ -3421,7 +3421,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   __pyx_v_iss2 = ((int)(((((__pyx_v_time2 * 24.0) * 60.0) - (__pyx_v_ihh2 * 60.0)) - __pyx_v_imm2) * 60.0));
 
-  /* "psgp4gm.pyx":501
+  /* "psgp4gm.pyx":503
  *   iss2 = (int)((time2 * 24.0 * 60.0  - ihh2 * 60.0 - imm2) * 60.0)
  * 
  *   gal_jd2cal(passinfo[2][0], 0.0, &iy3, &im3, &id3, &time3, status)             # <<<<<<<<<<<<<<
@@ -3430,7 +3430,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   gal_jd2cal(((__pyx_v_passinfo[2])[0]), 0.0, (&__pyx_v_iy3), (&__pyx_v_im3), (&__pyx_v_id3), (&__pyx_v_time3), __pyx_v_status);
 
-  /* "psgp4gm.pyx":502
+  /* "psgp4gm.pyx":504
  * 
  *   gal_jd2cal(passinfo[2][0], 0.0, &iy3, &im3, &id3, &time3, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -3440,26 +3440,26 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_2 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_2)) {
 
-    /* "psgp4gm.pyx":503
+    /* "psgp4gm.pyx":505
  *   gal_jd2cal(passinfo[2][0], 0.0, &iy3, &im3, &id3, &time3, status)
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_jd2cal returned code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  *   ihh3 = (int)(24.0 * time3)
  *   imm3 = (int)((time3 * 24.0 - ihh3) * 60.0)
  */
-    __pyx_t_4 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 503, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 505, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 503, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 505, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_jd2cal_returned_code, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 503, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_jd2cal_returned_code, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 505, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_4, 0, 0);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __PYX_ERR(0, 503, __pyx_L1_error)
+    __PYX_ERR(0, 505, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":502
+    /* "psgp4gm.pyx":504
  * 
  *   gal_jd2cal(passinfo[2][0], 0.0, &iy3, &im3, &id3, &time3, status)
  *   if (status[0].errc <> 0):             # <<<<<<<<<<<<<<
@@ -3468,7 +3468,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   }
 
-  /* "psgp4gm.pyx":504
+  /* "psgp4gm.pyx":506
  *   if (status[0].errc <> 0):
  *     raise Exception, "gal_jd2cal returned code " + str(status[0].errc)
  *   ihh3 = (int)(24.0 * time3)             # <<<<<<<<<<<<<<
@@ -3477,7 +3477,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   __pyx_v_ihh3 = ((int)(24.0 * __pyx_v_time3));
 
-  /* "psgp4gm.pyx":505
+  /* "psgp4gm.pyx":507
  *     raise Exception, "gal_jd2cal returned code " + str(status[0].errc)
  *   ihh3 = (int)(24.0 * time3)
  *   imm3 = (int)((time3 * 24.0 - ihh3) * 60.0)             # <<<<<<<<<<<<<<
@@ -3486,7 +3486,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   __pyx_v_imm3 = ((int)(((__pyx_v_time3 * 24.0) - __pyx_v_ihh3) * 60.0));
 
-  /* "psgp4gm.pyx":506
+  /* "psgp4gm.pyx":508
  *   ihh3 = (int)(24.0 * time3)
  *   imm3 = (int)((time3 * 24.0 - ihh3) * 60.0)
  *   iss3 = (int)((time3 * 24.0 * 60.0  - ihh3 * 60.0 - imm3) * 60.0)             # <<<<<<<<<<<<<<
@@ -3495,7 +3495,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   __pyx_v_iss3 = ((int)(((((__pyx_v_time3 * 24.0) * 60.0) - (__pyx_v_ihh3 * 60.0)) - __pyx_v_imm3) * 60.0));
 
-  /* "psgp4gm.pyx":508
+  /* "psgp4gm.pyx":510
  *   iss3 = (int)((time3 * 24.0 * 60.0  - ihh3 * 60.0 - imm3) * 60.0)
  * 
  *   gal_stsfree(status)             # <<<<<<<<<<<<<<
@@ -3504,7 +3504,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  */
   gal_stsfree(__pyx_v_status);
 
-  /* "psgp4gm.pyx":510
+  /* "psgp4gm.pyx":512
  *   gal_stsfree(status)
  * 
  *   return ((iy1, im1, id1, ihh1, imm1, iss1, passinfo[0][0]), passinfo[0][1] * GAL_R2D, passinfo[0][2] * GAL_R2D, (iy2, im2, id2, ihh2, imm2, iss2,  passinfo[1][0]), passinfo[1][1] * GAL_R2D, passinfo[1][2] * GAL_R2D, (iy3, im3, id3, ihh3, imm3, iss3,  passinfo[2][0]), passinfo[2][1] * GAL_R2D, passinfo[2][2] * GAL_R2D)             # <<<<<<<<<<<<<<
@@ -3512,21 +3512,21 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
  * """
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_iy1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_iy1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_im1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_im1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_id1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_id1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_ihh1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_ihh1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_imm1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_imm1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_iss1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_iss1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_10 = PyFloat_FromDouble(((__pyx_v_passinfo[0])[0])); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_10 = PyFloat_FromDouble(((__pyx_v_passinfo[0])[0])); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_11 = PyTuple_New(7); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_11 = PyTuple_New(7); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_4);
@@ -3549,25 +3549,25 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_8 = 0;
   __pyx_t_9 = 0;
   __pyx_t_10 = 0;
-  __pyx_t_10 = PyFloat_FromDouble((((__pyx_v_passinfo[0])[1]) * GAL_R2D)); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_10 = PyFloat_FromDouble((((__pyx_v_passinfo[0])[1]) * GAL_R2D)); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_9 = PyFloat_FromDouble((((__pyx_v_passinfo[0])[2]) * GAL_R2D)); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_9 = PyFloat_FromDouble((((__pyx_v_passinfo[0])[2]) * GAL_R2D)); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_iy2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_iy2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_im2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_im2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_id2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_id2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_ihh2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_ihh2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_imm2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_imm2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_12 = __Pyx_PyInt_From_int(__pyx_v_iss2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyInt_From_int(__pyx_v_iss2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __pyx_t_13 = PyFloat_FromDouble(((__pyx_v_passinfo[1])[0])); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_13 = PyFloat_FromDouble(((__pyx_v_passinfo[1])[0])); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
-  __pyx_t_14 = PyTuple_New(7); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_14 = PyTuple_New(7); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
   __Pyx_GIVEREF(__pyx_t_8);
   PyTuple_SET_ITEM(__pyx_t_14, 0, __pyx_t_8);
@@ -3590,25 +3590,25 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_4 = 0;
   __pyx_t_12 = 0;
   __pyx_t_13 = 0;
-  __pyx_t_13 = PyFloat_FromDouble((((__pyx_v_passinfo[1])[1]) * GAL_R2D)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_13 = PyFloat_FromDouble((((__pyx_v_passinfo[1])[1]) * GAL_R2D)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
-  __pyx_t_12 = PyFloat_FromDouble((((__pyx_v_passinfo[1])[2]) * GAL_R2D)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_12 = PyFloat_FromDouble((((__pyx_v_passinfo[1])[2]) * GAL_R2D)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_iy3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_iy3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_im3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_im3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_id3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_id3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_ihh3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_ihh3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_imm3); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_imm3); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_15 = __Pyx_PyInt_From_int(__pyx_v_iss3); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_15 = __Pyx_PyInt_From_int(__pyx_v_iss3); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
-  __pyx_t_16 = PyFloat_FromDouble(((__pyx_v_passinfo[2])[0])); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_16 = PyFloat_FromDouble(((__pyx_v_passinfo[2])[0])); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_16);
-  __pyx_t_17 = PyTuple_New(7); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_17 = PyTuple_New(7); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_17);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_17, 0, __pyx_t_4);
@@ -3631,11 +3631,11 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_8 = 0;
   __pyx_t_15 = 0;
   __pyx_t_16 = 0;
-  __pyx_t_16 = PyFloat_FromDouble((((__pyx_v_passinfo[2])[1]) * GAL_R2D)); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_16 = PyFloat_FromDouble((((__pyx_v_passinfo[2])[1]) * GAL_R2D)); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_16);
-  __pyx_t_15 = PyFloat_FromDouble((((__pyx_v_passinfo[2])[2]) * GAL_R2D)); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_15 = PyFloat_FromDouble((((__pyx_v_passinfo[2])[2]) * GAL_R2D)); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
-  __pyx_t_8 = PyTuple_New(9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_8 = PyTuple_New(9); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_GIVEREF(__pyx_t_11);
   PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_11);
@@ -3668,7 +3668,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_8 = 0;
   goto __pyx_L0;
 
-  /* "psgp4gm.pyx":438
+  /* "psgp4gm.pyx":440
  * """
  * 
  * def find_rise_set(y, m, d, hh, mm, ss, minel, daysfwd):             # <<<<<<<<<<<<<<
@@ -3700,7 +3700,7 @@ static PyObject *__pyx_pf_7psgp4gm_6find_rise_set(CYTHON_UNUSED PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "psgp4gm.pyx":518
+/* "psgp4gm.pyx":520
  * """
  * 
  * def sun_position(y, m, d, hh, mm, ss, lng, lat, height):             # <<<<<<<<<<<<<<
@@ -3764,53 +3764,53 @@ static PyObject *__pyx_pw_7psgp4gm_9sun_position(PyObject *__pyx_self, PyObject 
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_m)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, 1); __PYX_ERR(0, 518, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, 1); __PYX_ERR(0, 520, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, 2); __PYX_ERR(0, 518, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, 2); __PYX_ERR(0, 520, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_hh)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, 3); __PYX_ERR(0, 518, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, 3); __PYX_ERR(0, 520, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_mm)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, 4); __PYX_ERR(0, 518, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, 4); __PYX_ERR(0, 520, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_ss)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, 5); __PYX_ERR(0, 518, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, 5); __PYX_ERR(0, 520, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
         if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_lng)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, 6); __PYX_ERR(0, 518, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, 6); __PYX_ERR(0, 520, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
         if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_lat)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, 7); __PYX_ERR(0, 518, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, 7); __PYX_ERR(0, 520, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  8:
         if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_height)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, 8); __PYX_ERR(0, 518, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, 8); __PYX_ERR(0, 520, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "sun_position") < 0)) __PYX_ERR(0, 518, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "sun_position") < 0)) __PYX_ERR(0, 520, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 9) {
       goto __pyx_L5_argtuple_error;
@@ -3837,7 +3837,7 @@ static PyObject *__pyx_pw_7psgp4gm_9sun_position(PyObject *__pyx_self, PyObject 
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 518, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("sun_position", 1, 9, 9, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 520, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("psgp4gm.sun_position", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3900,115 +3900,115 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("sun_position", 0);
 
-  /* "psgp4gm.pyx":543
+  /* "psgp4gm.pyx":545
  *   cdef int visible
  * 
  *   year = y             # <<<<<<<<<<<<<<
  *   month = m
  *   day = d
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_y); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 543, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_y); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 545, __pyx_L1_error)
   __pyx_v_year = __pyx_t_1;
 
-  /* "psgp4gm.pyx":544
+  /* "psgp4gm.pyx":546
  * 
  *   year = y
  *   month = m             # <<<<<<<<<<<<<<
  *   day = d
  *   hr = hh
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_m); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 544, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_m); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 546, __pyx_L1_error)
   __pyx_v_month = __pyx_t_1;
 
-  /* "psgp4gm.pyx":545
+  /* "psgp4gm.pyx":547
  *   year = y
  *   month = m
  *   day = d             # <<<<<<<<<<<<<<
  *   hr = hh
  *   min = mm
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_d); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 545, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_d); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 547, __pyx_L1_error)
   __pyx_v_day = __pyx_t_1;
 
-  /* "psgp4gm.pyx":546
+  /* "psgp4gm.pyx":548
  *   month = m
  *   day = d
  *   hr = hh             # <<<<<<<<<<<<<<
  *   min = mm
  *   sec = ss
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_hh); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 546, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_hh); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 548, __pyx_L1_error)
   __pyx_v_hr = __pyx_t_1;
 
-  /* "psgp4gm.pyx":547
+  /* "psgp4gm.pyx":549
  *   day = d
  *   hr = hh
  *   min = mm             # <<<<<<<<<<<<<<
  *   sec = ss
  * 
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_mm); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 547, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_mm); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 549, __pyx_L1_error)
   __pyx_v_min = __pyx_t_1;
 
-  /* "psgp4gm.pyx":548
+  /* "psgp4gm.pyx":550
  *   hr = hh
  *   min = mm
  *   sec = ss             # <<<<<<<<<<<<<<
  * 
  *   elong = lng * GAL_PI / 180.0
  */
-  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_ss); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 548, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_As_int(__pyx_v_ss); if (unlikely((__pyx_t_1 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 550, __pyx_L1_error)
   __pyx_v_sec = __pyx_t_1;
 
-  /* "psgp4gm.pyx":550
+  /* "psgp4gm.pyx":552
  *   sec = ss
  * 
  *   elong = lng * GAL_PI / 180.0             # <<<<<<<<<<<<<<
  *   phi   = lat * GAL_PI / 180.0
  *   h     = height
  */
-  __pyx_t_2 = PyFloat_FromDouble(GAL_PI); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 550, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(GAL_PI); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 552, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyNumber_Multiply(__pyx_v_lng, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 550, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Multiply(__pyx_v_lng, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 552, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyFloat_TrueDivideObjC(__pyx_t_3, __pyx_float_180_0, 180.0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 550, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyFloat_TrueDivideObjC(__pyx_t_3, __pyx_float_180_0, 180.0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 552, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_4 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_4 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 550, __pyx_L1_error)
+  __pyx_t_4 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_4 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 552, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_elong = __pyx_t_4;
 
-  /* "psgp4gm.pyx":551
+  /* "psgp4gm.pyx":553
  * 
  *   elong = lng * GAL_PI / 180.0
  *   phi   = lat * GAL_PI / 180.0             # <<<<<<<<<<<<<<
  *   h     = height
  * 
  */
-  __pyx_t_2 = PyFloat_FromDouble(GAL_PI); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 551, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(GAL_PI); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 553, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyNumber_Multiply(__pyx_v_lat, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 551, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Multiply(__pyx_v_lat, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 553, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyFloat_TrueDivideObjC(__pyx_t_3, __pyx_float_180_0, 180.0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 551, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyFloat_TrueDivideObjC(__pyx_t_3, __pyx_float_180_0, 180.0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 553, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_4 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_4 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 551, __pyx_L1_error)
+  __pyx_t_4 = __pyx_PyFloat_AsDouble(__pyx_t_2); if (unlikely((__pyx_t_4 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 553, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_phi = __pyx_t_4;
 
-  /* "psgp4gm.pyx":552
+  /* "psgp4gm.pyx":554
  *   elong = lng * GAL_PI / 180.0
  *   phi   = lat * GAL_PI / 180.0
  *   h     = height             # <<<<<<<<<<<<<<
  * 
  *   status = gal_stsalloc()
  */
-  __pyx_t_4 = __pyx_PyFloat_AsDouble(__pyx_v_height); if (unlikely((__pyx_t_4 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 552, __pyx_L1_error)
+  __pyx_t_4 = __pyx_PyFloat_AsDouble(__pyx_v_height); if (unlikely((__pyx_t_4 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 554, __pyx_L1_error)
   __pyx_v_h = __pyx_t_4;
 
-  /* "psgp4gm.pyx":554
+  /* "psgp4gm.pyx":556
  *   h     = height
  * 
  *   status = gal_stsalloc()             # <<<<<<<<<<<<<<
@@ -4017,7 +4017,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   __pyx_v_status = gal_stsalloc();
 
-  /* "psgp4gm.pyx":556
+  /* "psgp4gm.pyx":558
  *   status = gal_stsalloc()
  * 
  *   gal_cal2jd(year, month, day, &epoch1, &epoch2, status)             # <<<<<<<<<<<<<<
@@ -4026,7 +4026,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   gal_cal2jd(__pyx_v_year, __pyx_v_month, __pyx_v_day, (&__pyx_v_epoch1), (&__pyx_v_epoch2), __pyx_v_status);
 
-  /* "psgp4gm.pyx":557
+  /* "psgp4gm.pyx":559
  * 
  *   gal_cal2jd(year, month, day, &epoch1, &epoch2, status)
  *   if status[0].errc <> 0:             # <<<<<<<<<<<<<<
@@ -4036,26 +4036,26 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_5 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_5)) {
 
-    /* "psgp4gm.pyx":558
+    /* "psgp4gm.pyx":560
  *   gal_cal2jd(year, month, day, &epoch1, &epoch2, status)
  *   if status[0].errc <> 0:
  *     raise Exception, "gal_cal2jd returned code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  *   epoch2 = epoch2 + hr / 24.0 + min / 24.0 / 60.0 + sec / 24.0 /60.0 / 60.0
  * 
  */
-    __pyx_t_2 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 558, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 560, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 558, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 560, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_cal2jd_returned_code, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 558, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gal_cal2jd_returned_code, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 560, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_2, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __PYX_ERR(0, 558, __pyx_L1_error)
+    __PYX_ERR(0, 560, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":557
+    /* "psgp4gm.pyx":559
  * 
  *   gal_cal2jd(year, month, day, &epoch1, &epoch2, status)
  *   if status[0].errc <> 0:             # <<<<<<<<<<<<<<
@@ -4064,7 +4064,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   }
 
-  /* "psgp4gm.pyx":559
+  /* "psgp4gm.pyx":561
  *   if status[0].errc <> 0:
  *     raise Exception, "gal_cal2jd returned code " + str(status[0].errc)
  *   epoch2 = epoch2 + hr / 24.0 + min / 24.0 / 60.0 + sec / 24.0 /60.0 / 60.0             # <<<<<<<<<<<<<<
@@ -4073,7 +4073,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   __pyx_v_epoch2 = (((__pyx_v_epoch2 + (((double)__pyx_v_hr) / 24.0)) + ((((double)__pyx_v_min) / 24.0) / 60.0)) + (((((double)__pyx_v_sec) / 24.0) / 60.0) / 60.0));
 
-  /* "psgp4gm.pyx":561
+  /* "psgp4gm.pyx":563
  *   epoch2 = epoch2 + hr / 24.0 + min / 24.0 / 60.0 + sec / 24.0 /60.0 / 60.0
  * 
  *   gal_gsupv00(epoch1, epoch2, pv, status)             # <<<<<<<<<<<<<<
@@ -4082,7 +4082,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   (void)(gal_gsupv00(__pyx_v_epoch1, __pyx_v_epoch2, __pyx_v_pv, __pyx_v_status));
 
-  /* "psgp4gm.pyx":563
+  /* "psgp4gm.pyx":565
  *   gal_gsupv00(epoch1, epoch2, pv, status)
  * 
  *   if status[0].errc <> 0:             # <<<<<<<<<<<<<<
@@ -4092,7 +4092,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_5 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_5)) {
 
-    /* "psgp4gm.pyx":564
+    /* "psgp4gm.pyx":566
  * 
  *   if status[0].errc <> 0:
  *     raise Exception, "Date/Time in invalid range for gal_gsupv00."             # <<<<<<<<<<<<<<
@@ -4100,9 +4100,9 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  *   gal_c2tpv00a(pv, epoch1, epoch2, 0.5, 0.0, 0.0, 0.0, itrf, status)
  */
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_kp_u_Date_Time_in_invalid_range_for_g, 0, 0);
-    __PYX_ERR(0, 564, __pyx_L1_error)
+    __PYX_ERR(0, 566, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":563
+    /* "psgp4gm.pyx":565
  *   gal_gsupv00(epoch1, epoch2, pv, status)
  * 
  *   if status[0].errc <> 0:             # <<<<<<<<<<<<<<
@@ -4111,7 +4111,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   }
 
-  /* "psgp4gm.pyx":566
+  /* "psgp4gm.pyx":568
  *     raise Exception, "Date/Time in invalid range for gal_gsupv00."
  * 
  *   gal_c2tpv00a(pv, epoch1, epoch2, 0.5, 0.0, 0.0, 0.0, itrf, status)             # <<<<<<<<<<<<<<
@@ -4120,7 +4120,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   gal_c2tpv00a(__pyx_v_pv, __pyx_v_epoch1, __pyx_v_epoch2, 0.5, 0.0, 0.0, 0.0, __pyx_v_itrf, __pyx_v_status);
 
-  /* "psgp4gm.pyx":568
+  /* "psgp4gm.pyx":570
  *   gal_c2tpv00a(pv, epoch1, epoch2, 0.5, 0.0, 0.0, 0.0, itrf, status)
  * 
  *   if status[0].errc <> 0:             # <<<<<<<<<<<<<<
@@ -4130,26 +4130,26 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_5 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_5)) {
 
-    /* "psgp4gm.pyx":569
+    /* "psgp4gm.pyx":571
  * 
  *   if status[0].errc <> 0:
  *     raise Exception, "c2tpv00a return code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  * 
  * # Let's get constants for the ellipsoide formula in the Geocentric reference frame
  */
-    __pyx_t_2 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 569, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 571, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 569, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 571, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u_c2tpv00a_return_code, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 569, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u_c2tpv00a_return_code, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 571, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_2, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __PYX_ERR(0, 569, __pyx_L1_error)
+    __PYX_ERR(0, 571, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":568
+    /* "psgp4gm.pyx":570
  *   gal_c2tpv00a(pv, epoch1, epoch2, 0.5, 0.0, 0.0, 0.0, itrf, status)
  * 
  *   if status[0].errc <> 0:             # <<<<<<<<<<<<<<
@@ -4158,7 +4158,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   }
 
-  /* "psgp4gm.pyx":573
+  /* "psgp4gm.pyx":575
  * # Let's get constants for the ellipsoide formula in the Geocentric reference frame
  * 
  *   gal_gd2gc(GAL_EMEA_WGS1984, 0.0, 0.0, h, xyz, status)             # <<<<<<<<<<<<<<
@@ -4167,7 +4167,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   gal_gd2gc(GAL_EMEA_WGS1984, 0.0, 0.0, __pyx_v_h, __pyx_v_xyz, __pyx_v_status);
 
-  /* "psgp4gm.pyx":574
+  /* "psgp4gm.pyx":576
  * 
  *   gal_gd2gc(GAL_EMEA_WGS1984, 0.0, 0.0, h, xyz, status)
  *   if status[0].errc <> 0:             # <<<<<<<<<<<<<<
@@ -4177,26 +4177,26 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_5 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_5)) {
 
-    /* "psgp4gm.pyx":575
+    /* "psgp4gm.pyx":577
  *   gal_gd2gc(GAL_EMEA_WGS1984, 0.0, 0.0, h, xyz, status)
  *   if status[0].errc <> 0:
  *     raise Exception, "gd2gc return code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  *   a = xyz[0]
  * 
  */
-    __pyx_t_2 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 575, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 577, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 575, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 577, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gd2gc_return_code, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 575, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gd2gc_return_code, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 577, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_2, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __PYX_ERR(0, 575, __pyx_L1_error)
+    __PYX_ERR(0, 577, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":574
+    /* "psgp4gm.pyx":576
  * 
  *   gal_gd2gc(GAL_EMEA_WGS1984, 0.0, 0.0, h, xyz, status)
  *   if status[0].errc <> 0:             # <<<<<<<<<<<<<<
@@ -4205,7 +4205,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   }
 
-  /* "psgp4gm.pyx":576
+  /* "psgp4gm.pyx":578
  *   if status[0].errc <> 0:
  *     raise Exception, "gd2gc return code " + str(status[0].errc)
  *   a = xyz[0]             # <<<<<<<<<<<<<<
@@ -4214,7 +4214,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   __pyx_v_a = (__pyx_v_xyz[0]);
 
-  /* "psgp4gm.pyx":578
+  /* "psgp4gm.pyx":580
  *   a = xyz[0]
  * 
  *   gal_gd2gc(GAL_EMEA_WGS1984, GAL_PI/2.0, 0.0, h, xyz, status)             # <<<<<<<<<<<<<<
@@ -4223,7 +4223,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   gal_gd2gc(GAL_EMEA_WGS1984, (GAL_PI / 2.0), 0.0, __pyx_v_h, __pyx_v_xyz, __pyx_v_status);
 
-  /* "psgp4gm.pyx":579
+  /* "psgp4gm.pyx":581
  * 
  *   gal_gd2gc(GAL_EMEA_WGS1984, GAL_PI/2.0, 0.0, h, xyz, status)
  *   if status[0].errc <> 0:             # <<<<<<<<<<<<<<
@@ -4233,26 +4233,26 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_5 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_5)) {
 
-    /* "psgp4gm.pyx":580
+    /* "psgp4gm.pyx":582
  *   gal_gd2gc(GAL_EMEA_WGS1984, GAL_PI/2.0, 0.0, h, xyz, status)
  *   if status[0].errc <> 0:
  *     raise Exception, "gd2gc return code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  *   b = xyz[1]
  * 
  */
-    __pyx_t_2 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 580, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 582, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 580, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 582, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gd2gc_return_code, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 580, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gd2gc_return_code, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 582, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_2, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __PYX_ERR(0, 580, __pyx_L1_error)
+    __PYX_ERR(0, 582, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":579
+    /* "psgp4gm.pyx":581
  * 
  *   gal_gd2gc(GAL_EMEA_WGS1984, GAL_PI/2.0, 0.0, h, xyz, status)
  *   if status[0].errc <> 0:             # <<<<<<<<<<<<<<
@@ -4261,7 +4261,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   }
 
-  /* "psgp4gm.pyx":581
+  /* "psgp4gm.pyx":583
  *   if status[0].errc <> 0:
  *     raise Exception, "gd2gc return code " + str(status[0].errc)
  *   b = xyz[1]             # <<<<<<<<<<<<<<
@@ -4270,7 +4270,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   __pyx_v_b = (__pyx_v_xyz[1]);
 
-  /* "psgp4gm.pyx":583
+  /* "psgp4gm.pyx":585
  *   b = xyz[1]
  * 
  *   gal_gd2gc(GAL_EMEA_WGS1984, 0.0, GAL_PI/2.0, h, xyz, status)             # <<<<<<<<<<<<<<
@@ -4279,7 +4279,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   gal_gd2gc(GAL_EMEA_WGS1984, 0.0, (GAL_PI / 2.0), __pyx_v_h, __pyx_v_xyz, __pyx_v_status);
 
-  /* "psgp4gm.pyx":584
+  /* "psgp4gm.pyx":586
  * 
  *   gal_gd2gc(GAL_EMEA_WGS1984, 0.0, GAL_PI/2.0, h, xyz, status)
  *   if status[0].errc <> 0:             # <<<<<<<<<<<<<<
@@ -4289,26 +4289,26 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_5 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_5)) {
 
-    /* "psgp4gm.pyx":585
+    /* "psgp4gm.pyx":587
  *   gal_gd2gc(GAL_EMEA_WGS1984, 0.0, GAL_PI/2.0, h, xyz, status)
  *   if status[0].errc <> 0:
  *     raise Exception, "gd2gc return code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  *   c = xyz[2]
  * 
  */
-    __pyx_t_2 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 585, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 587, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 585, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 587, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gd2gc_return_code, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 585, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gd2gc_return_code, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 587, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_2, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __PYX_ERR(0, 585, __pyx_L1_error)
+    __PYX_ERR(0, 587, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":584
+    /* "psgp4gm.pyx":586
  * 
  *   gal_gd2gc(GAL_EMEA_WGS1984, 0.0, GAL_PI/2.0, h, xyz, status)
  *   if status[0].errc <> 0:             # <<<<<<<<<<<<<<
@@ -4317,7 +4317,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   }
 
-  /* "psgp4gm.pyx":586
+  /* "psgp4gm.pyx":588
  *   if status[0].errc <> 0:
  *     raise Exception, "gd2gc return code " + str(status[0].errc)
  *   c = xyz[2]             # <<<<<<<<<<<<<<
@@ -4326,7 +4326,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   __pyx_v_c = (__pyx_v_xyz[2]);
 
-  /* "psgp4gm.pyx":590
+  /* "psgp4gm.pyx":592
  * # Convert the point on the Earth to the Geocentric frame reference
  * 
  *   gal_gd2gc(GAL_EMEA_WGS1984, elong, phi, h, xyz, status)             # <<<<<<<<<<<<<<
@@ -4335,7 +4335,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   gal_gd2gc(GAL_EMEA_WGS1984, __pyx_v_elong, __pyx_v_phi, __pyx_v_h, __pyx_v_xyz, __pyx_v_status);
 
-  /* "psgp4gm.pyx":592
+  /* "psgp4gm.pyx":594
  *   gal_gd2gc(GAL_EMEA_WGS1984, elong, phi, h, xyz, status)
  * 
  *   if status[0].errc <> 0:             # <<<<<<<<<<<<<<
@@ -4345,26 +4345,26 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_5 = (((__pyx_v_status[0]).errc != 0) != 0);
   if (unlikely(__pyx_t_5)) {
 
-    /* "psgp4gm.pyx":593
+    /* "psgp4gm.pyx":595
  * 
  *   if status[0].errc <> 0:
  *     raise Exception, "gd2gc return code " + str(status[0].errc)             # <<<<<<<<<<<<<<
  * 
  * # Obtain Sun position vector
  */
-    __pyx_t_2 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 593, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyInt_From_int((__pyx_v_status[0]).errc); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 595, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 593, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 595, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gd2gc_return_code, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 593, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u_gd2gc_return_code, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 595, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_Raise(((PyObject *)(&((PyTypeObject*)PyExc_Exception)[0])), __pyx_t_2, 0, 0);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __PYX_ERR(0, 593, __pyx_L1_error)
+    __PYX_ERR(0, 595, __pyx_L1_error)
 
-    /* "psgp4gm.pyx":592
+    /* "psgp4gm.pyx":594
  *   gal_gd2gc(GAL_EMEA_WGS1984, elong, phi, h, xyz, status)
  * 
  *   if status[0].errc <> 0:             # <<<<<<<<<<<<<<
@@ -4373,7 +4373,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   }
 
-  /* "psgp4gm.pyx":597
+  /* "psgp4gm.pyx":599
  * # Obtain Sun position vector
  * 
  *   sun[0] = itrf[0][0] - xyz[0]             # <<<<<<<<<<<<<<
@@ -4382,7 +4382,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   (__pyx_v_sun[0]) = (((__pyx_v_itrf[0])[0]) - (__pyx_v_xyz[0]));
 
-  /* "psgp4gm.pyx":598
+  /* "psgp4gm.pyx":600
  * 
  *   sun[0] = itrf[0][0] - xyz[0]
  *   sun[1] = itrf[0][1] - xyz[1]             # <<<<<<<<<<<<<<
@@ -4391,7 +4391,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   (__pyx_v_sun[1]) = (((__pyx_v_itrf[0])[1]) - (__pyx_v_xyz[1]));
 
-  /* "psgp4gm.pyx":599
+  /* "psgp4gm.pyx":601
  *   sun[0] = itrf[0][0] - xyz[0]
  *   sun[1] = itrf[0][1] - xyz[1]
  *   sun[2] = itrf[0][2] - xyz[2]             # <<<<<<<<<<<<<<
@@ -4400,7 +4400,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   (__pyx_v_sun[2]) = (((__pyx_v_itrf[0])[2]) - (__pyx_v_xyz[2]));
 
-  /* "psgp4gm.pyx":603
+  /* "psgp4gm.pyx":605
  * # Calculate the parameter for a point on the tangent plane to the ellipsoide
  * 
  *   t = -(xyz[0]*sun[0]/a**2 + xyz[1]*sun[1]/b**2 + xyz[2]*sun[2]/c**2)/((xyz[0]/a**2)**2 + (xyz[1]/b**2)**2 + (xyz[2]/c**2)**2)             # <<<<<<<<<<<<<<
@@ -4411,44 +4411,44 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_6 = pow(__pyx_v_a, 2.0);
   if (unlikely(__pyx_t_6 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 603, __pyx_L1_error)
+    __PYX_ERR(0, 605, __pyx_L1_error)
   }
   __pyx_t_7 = ((__pyx_v_xyz[1]) * (__pyx_v_sun[1]));
   __pyx_t_8 = pow(__pyx_v_b, 2.0);
   if (unlikely(__pyx_t_8 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 603, __pyx_L1_error)
+    __PYX_ERR(0, 605, __pyx_L1_error)
   }
   __pyx_t_9 = ((__pyx_v_xyz[2]) * (__pyx_v_sun[2]));
   __pyx_t_10 = pow(__pyx_v_c, 2.0);
   if (unlikely(__pyx_t_10 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 603, __pyx_L1_error)
+    __PYX_ERR(0, 605, __pyx_L1_error)
   }
   __pyx_t_11 = (-(((__pyx_t_4 / __pyx_t_6) + (__pyx_t_7 / __pyx_t_8)) + (__pyx_t_9 / __pyx_t_10)));
   __pyx_t_10 = pow(__pyx_v_a, 2.0);
   if (unlikely(__pyx_t_10 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 603, __pyx_L1_error)
+    __PYX_ERR(0, 605, __pyx_L1_error)
   }
   __pyx_t_9 = pow(__pyx_v_b, 2.0);
   if (unlikely(__pyx_t_9 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 603, __pyx_L1_error)
+    __PYX_ERR(0, 605, __pyx_L1_error)
   }
   __pyx_t_8 = pow(__pyx_v_c, 2.0);
   if (unlikely(__pyx_t_8 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 603, __pyx_L1_error)
+    __PYX_ERR(0, 605, __pyx_L1_error)
   }
   __pyx_t_7 = ((pow(((__pyx_v_xyz[0]) / __pyx_t_10), 2.0) + pow(((__pyx_v_xyz[1]) / __pyx_t_9), 2.0)) + pow(((__pyx_v_xyz[2]) / __pyx_t_8), 2.0));
   if (unlikely(__pyx_t_7 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 603, __pyx_L1_error)
+    __PYX_ERR(0, 605, __pyx_L1_error)
   }
   __pyx_v_t = (__pyx_t_11 / __pyx_t_7);
 
-  /* "psgp4gm.pyx":607
+  /* "psgp4gm.pyx":609
  * # Calculate a projection of the 'sun' vestor on the tangent plane
  * 
  *   p[0] = sun[0] + t*xyz[0]/a**2             # <<<<<<<<<<<<<<
@@ -4459,11 +4459,11 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_11 = pow(__pyx_v_a, 2.0);
   if (unlikely(__pyx_t_11 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 607, __pyx_L1_error)
+    __PYX_ERR(0, 609, __pyx_L1_error)
   }
   (__pyx_v_p[0]) = ((__pyx_v_sun[0]) + (__pyx_t_7 / __pyx_t_11));
 
-  /* "psgp4gm.pyx":608
+  /* "psgp4gm.pyx":610
  * 
  *   p[0] = sun[0] + t*xyz[0]/a**2
  *   p[1] = sun[1] + t*xyz[1]/b**2             # <<<<<<<<<<<<<<
@@ -4474,11 +4474,11 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_7 = pow(__pyx_v_b, 2.0);
   if (unlikely(__pyx_t_7 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 608, __pyx_L1_error)
+    __PYX_ERR(0, 610, __pyx_L1_error)
   }
   (__pyx_v_p[1]) = ((__pyx_v_sun[1]) + (__pyx_t_11 / __pyx_t_7));
 
-  /* "psgp4gm.pyx":609
+  /* "psgp4gm.pyx":611
  *   p[0] = sun[0] + t*xyz[0]/a**2
  *   p[1] = sun[1] + t*xyz[1]/b**2
  *   p[2] = sun[2] + t*xyz[2]/c**2             # <<<<<<<<<<<<<<
@@ -4489,11 +4489,11 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_11 = pow(__pyx_v_c, 2.0);
   if (unlikely(__pyx_t_11 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 609, __pyx_L1_error)
+    __PYX_ERR(0, 611, __pyx_L1_error)
   }
   (__pyx_v_p[2]) = ((__pyx_v_sun[2]) + (__pyx_t_7 / __pyx_t_11));
 
-  /* "psgp4gm.pyx":613
+  /* "psgp4gm.pyx":615
  * # Determine sun elevation
  * 
  *   alpha = gal_sepp(p, sun)             # <<<<<<<<<<<<<<
@@ -4502,7 +4502,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   __pyx_v_alpha = gal_sepp(__pyx_v_p, __pyx_v_sun);
 
-  /* "psgp4gm.pyx":617
+  /* "psgp4gm.pyx":619
  * # Calculate another parameter t to determine what side of the tangent plane the sun is
  * 
  *   t = 1.0/( (xyz[0] + sun[0])*xyz[0]/a**2 + (xyz[1] + sun[1])*xyz[1]/b**2 + (xyz[2] + sun[2])*xyz[2]/c**2 )             # <<<<<<<<<<<<<<
@@ -4513,28 +4513,28 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_7 = pow(__pyx_v_a, 2.0);
   if (unlikely(__pyx_t_7 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 617, __pyx_L1_error)
+    __PYX_ERR(0, 619, __pyx_L1_error)
   }
   __pyx_t_8 = (((__pyx_v_xyz[1]) + (__pyx_v_sun[1])) * (__pyx_v_xyz[1]));
   __pyx_t_9 = pow(__pyx_v_b, 2.0);
   if (unlikely(__pyx_t_9 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 617, __pyx_L1_error)
+    __PYX_ERR(0, 619, __pyx_L1_error)
   }
   __pyx_t_10 = (((__pyx_v_xyz[2]) + (__pyx_v_sun[2])) * (__pyx_v_xyz[2]));
   __pyx_t_6 = pow(__pyx_v_c, 2.0);
   if (unlikely(__pyx_t_6 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 617, __pyx_L1_error)
+    __PYX_ERR(0, 619, __pyx_L1_error)
   }
   __pyx_t_4 = (((__pyx_t_11 / __pyx_t_7) + (__pyx_t_8 / __pyx_t_9)) + (__pyx_t_10 / __pyx_t_6));
   if (unlikely(__pyx_t_4 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 617, __pyx_L1_error)
+    __PYX_ERR(0, 619, __pyx_L1_error)
   }
   __pyx_v_t = (1.0 / __pyx_t_4);
 
-  /* "psgp4gm.pyx":618
+  /* "psgp4gm.pyx":620
  * 
  *   t = 1.0/( (xyz[0] + sun[0])*xyz[0]/a**2 + (xyz[1] + sun[1])*xyz[1]/b**2 + (xyz[2] + sun[2])*xyz[2]/c**2 )
  *   if t >= 0:             # <<<<<<<<<<<<<<
@@ -4544,7 +4544,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_5 = ((__pyx_v_t >= 0.0) != 0);
   if (__pyx_t_5) {
 
-    /* "psgp4gm.pyx":619
+    /* "psgp4gm.pyx":621
  *   t = 1.0/( (xyz[0] + sun[0])*xyz[0]/a**2 + (xyz[1] + sun[1])*xyz[1]/b**2 + (xyz[2] + sun[2])*xyz[2]/c**2 )
  *   if t >= 0:
  *     visible = 1             # <<<<<<<<<<<<<<
@@ -4553,7 +4553,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
     __pyx_v_visible = 1;
 
-    /* "psgp4gm.pyx":618
+    /* "psgp4gm.pyx":620
  * 
  *   t = 1.0/( (xyz[0] + sun[0])*xyz[0]/a**2 + (xyz[1] + sun[1])*xyz[1]/b**2 + (xyz[2] + sun[2])*xyz[2]/c**2 )
  *   if t >= 0:             # <<<<<<<<<<<<<<
@@ -4563,7 +4563,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
     goto __pyx_L10;
   }
 
-  /* "psgp4gm.pyx":621
+  /* "psgp4gm.pyx":623
  *     visible = 1
  *   else:
  *     visible = 0             # <<<<<<<<<<<<<<
@@ -4575,7 +4575,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   }
   __pyx_L10:;
 
-  /* "psgp4gm.pyx":625
+  /* "psgp4gm.pyx":627
  * # Calculate parameter t for a projection of the nothern pole (0, 0, c) to the tangent plane
  * 
  *   t =  ( xyz[0]**2/a**2 + xyz[1]**2/b**2 + xyz[2]**2/c**2 )/( (xyz[0]/a**2)**2 + (xyz[1]/b**2)**2 + (xyz[2]/c**2)**2 )             # <<<<<<<<<<<<<<
@@ -4586,44 +4586,44 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_6 = pow(__pyx_v_a, 2.0);
   if (unlikely(__pyx_t_6 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 625, __pyx_L1_error)
+    __PYX_ERR(0, 627, __pyx_L1_error)
   }
   __pyx_t_10 = pow((__pyx_v_xyz[1]), 2.0);
   __pyx_t_9 = pow(__pyx_v_b, 2.0);
   if (unlikely(__pyx_t_9 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 625, __pyx_L1_error)
+    __PYX_ERR(0, 627, __pyx_L1_error)
   }
   __pyx_t_8 = pow((__pyx_v_xyz[2]), 2.0);
   __pyx_t_7 = pow(__pyx_v_c, 2.0);
   if (unlikely(__pyx_t_7 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 625, __pyx_L1_error)
+    __PYX_ERR(0, 627, __pyx_L1_error)
   }
   __pyx_t_11 = (((__pyx_t_4 / __pyx_t_6) + (__pyx_t_10 / __pyx_t_9)) + (__pyx_t_8 / __pyx_t_7));
   __pyx_t_7 = pow(__pyx_v_a, 2.0);
   if (unlikely(__pyx_t_7 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 625, __pyx_L1_error)
+    __PYX_ERR(0, 627, __pyx_L1_error)
   }
   __pyx_t_8 = pow(__pyx_v_b, 2.0);
   if (unlikely(__pyx_t_8 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 625, __pyx_L1_error)
+    __PYX_ERR(0, 627, __pyx_L1_error)
   }
   __pyx_t_9 = pow(__pyx_v_c, 2.0);
   if (unlikely(__pyx_t_9 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 625, __pyx_L1_error)
+    __PYX_ERR(0, 627, __pyx_L1_error)
   }
   __pyx_t_10 = ((pow(((__pyx_v_xyz[0]) / __pyx_t_7), 2.0) + pow(((__pyx_v_xyz[1]) / __pyx_t_8), 2.0)) + pow(((__pyx_v_xyz[2]) / __pyx_t_9), 2.0));
   if (unlikely(__pyx_t_10 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 625, __pyx_L1_error)
+    __PYX_ERR(0, 627, __pyx_L1_error)
   }
   __pyx_v_t = (__pyx_t_11 / __pyx_t_10);
 
-  /* "psgp4gm.pyx":631
+  /* "psgp4gm.pyx":633
  * # of the sun.
  * 
  *   n[0] = t*xyz[0]/a**2 - xyz[0]             # <<<<<<<<<<<<<<
@@ -4634,11 +4634,11 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_11 = pow(__pyx_v_a, 2.0);
   if (unlikely(__pyx_t_11 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 631, __pyx_L1_error)
+    __PYX_ERR(0, 633, __pyx_L1_error)
   }
   (__pyx_v_n[0]) = ((__pyx_t_10 / __pyx_t_11) - (__pyx_v_xyz[0]));
 
-  /* "psgp4gm.pyx":632
+  /* "psgp4gm.pyx":634
  * 
  *   n[0] = t*xyz[0]/a**2 - xyz[0]
  *   n[1] = t*xyz[1]/b**2 - xyz[1]             # <<<<<<<<<<<<<<
@@ -4649,11 +4649,11 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_10 = pow(__pyx_v_b, 2.0);
   if (unlikely(__pyx_t_10 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 632, __pyx_L1_error)
+    __PYX_ERR(0, 634, __pyx_L1_error)
   }
   (__pyx_v_n[1]) = ((__pyx_t_11 / __pyx_t_10) - (__pyx_v_xyz[1]));
 
-  /* "psgp4gm.pyx":633
+  /* "psgp4gm.pyx":635
  *   n[0] = t*xyz[0]/a**2 - xyz[0]
  *   n[1] = t*xyz[1]/b**2 - xyz[1]
  *   n[2] = t*xyz[2]/c**2 - xyz[2]             # <<<<<<<<<<<<<<
@@ -4664,11 +4664,11 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_11 = pow(__pyx_v_c, 2.0);
   if (unlikely(__pyx_t_11 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 633, __pyx_L1_error)
+    __PYX_ERR(0, 635, __pyx_L1_error)
   }
   (__pyx_v_n[2]) = ((__pyx_t_10 / __pyx_t_11) - (__pyx_v_xyz[2]));
 
-  /* "psgp4gm.pyx":637
+  /* "psgp4gm.pyx":639
  * # Determine sun azimuth
  * 
  *   tv[0] = -xyz[0]/a**2             # <<<<<<<<<<<<<<
@@ -4679,11 +4679,11 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_10 = pow(__pyx_v_a, 2.0);
   if (unlikely(__pyx_t_10 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 637, __pyx_L1_error)
+    __PYX_ERR(0, 639, __pyx_L1_error)
   }
   (__pyx_v_tv[0]) = (__pyx_t_11 / __pyx_t_10);
 
-  /* "psgp4gm.pyx":638
+  /* "psgp4gm.pyx":640
  * 
  *   tv[0] = -xyz[0]/a**2
  *   tv[1] = -xyz[1]/b**2             # <<<<<<<<<<<<<<
@@ -4694,11 +4694,11 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_11 = pow(__pyx_v_b, 2.0);
   if (unlikely(__pyx_t_11 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 638, __pyx_L1_error)
+    __PYX_ERR(0, 640, __pyx_L1_error)
   }
   (__pyx_v_tv[1]) = (__pyx_t_10 / __pyx_t_11);
 
-  /* "psgp4gm.pyx":639
+  /* "psgp4gm.pyx":641
  *   tv[0] = -xyz[0]/a**2
  *   tv[1] = -xyz[1]/b**2
  *   tv[2] = -xyz[2]/c**2             # <<<<<<<<<<<<<<
@@ -4709,11 +4709,11 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_10 = pow(__pyx_v_c, 2.0);
   if (unlikely(__pyx_t_10 == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 639, __pyx_L1_error)
+    __PYX_ERR(0, 641, __pyx_L1_error)
   }
   (__pyx_v_tv[2]) = (__pyx_t_11 / __pyx_t_10);
 
-  /* "psgp4gm.pyx":641
+  /* "psgp4gm.pyx":643
  *   tv[2] = -xyz[2]/c**2
  * 
  *   gal_pn(tv, &r, u)             # <<<<<<<<<<<<<<
@@ -4722,7 +4722,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   gal_pn(__pyx_v_tv, (&__pyx_v_r), __pyx_v_u);
 
-  /* "psgp4gm.pyx":643
+  /* "psgp4gm.pyx":645
  *   gal_pn(tv, &r, u)
  * 
  *   gal_pxp(n, p, w)             # <<<<<<<<<<<<<<
@@ -4731,7 +4731,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   gal_pxp(__pyx_v_n, __pyx_v_p, __pyx_v_w);
 
-  /* "psgp4gm.pyx":645
+  /* "psgp4gm.pyx":647
  *   gal_pxp(n, p, w)
  * 
  *   gamma = atan2(gal_pdp(u,w), gal_pdp(n,p))             # <<<<<<<<<<<<<<
@@ -4740,7 +4740,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   __pyx_v_gamma = atan2(gal_pdp(__pyx_v_u, __pyx_v_w), gal_pdp(__pyx_v_n, __pyx_v_p));
 
-  /* "psgp4gm.pyx":646
+  /* "psgp4gm.pyx":648
  * 
  *   gamma = atan2(gal_pdp(u,w), gal_pdp(n,p))
  *   if gamma < 0:             # <<<<<<<<<<<<<<
@@ -4750,7 +4750,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_5 = ((__pyx_v_gamma < 0.0) != 0);
   if (__pyx_t_5) {
 
-    /* "psgp4gm.pyx":647
+    /* "psgp4gm.pyx":649
  *   gamma = atan2(gal_pdp(u,w), gal_pdp(n,p))
  *   if gamma < 0:
  *     gamma = GAL_PI * 2.0 + gamma             # <<<<<<<<<<<<<<
@@ -4759,7 +4759,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
     __pyx_v_gamma = ((GAL_PI * 2.0) + __pyx_v_gamma);
 
-    /* "psgp4gm.pyx":646
+    /* "psgp4gm.pyx":648
  * 
  *   gamma = atan2(gal_pdp(u,w), gal_pdp(n,p))
  *   if gamma < 0:             # <<<<<<<<<<<<<<
@@ -4768,7 +4768,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   }
 
-  /* "psgp4gm.pyx":649
+  /* "psgp4gm.pyx":651
  *     gamma = GAL_PI * 2.0 + gamma
  * 
  *   gal_stsfree(status)             # <<<<<<<<<<<<<<
@@ -4777,7 +4777,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  */
   gal_stsfree(__pyx_v_status);
 
-  /* "psgp4gm.pyx":651
+  /* "psgp4gm.pyx":653
  *   gal_stsfree(status)
  * 
  *   return (visible, alpha * 180.0 / GAL_PI, gamma * 180.0 / GAL_PI)             # <<<<<<<<<<<<<<
@@ -4785,23 +4785,23 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_visible); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 651, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_visible); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 653, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_10 = (__pyx_v_alpha * 180.0);
   if (unlikely(GAL_PI == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 651, __pyx_L1_error)
+    __PYX_ERR(0, 653, __pyx_L1_error)
   }
-  __pyx_t_3 = PyFloat_FromDouble((__pyx_t_10 / GAL_PI)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 651, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble((__pyx_t_10 / GAL_PI)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 653, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_10 = (__pyx_v_gamma * 180.0);
   if (unlikely(GAL_PI == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 651, __pyx_L1_error)
+    __PYX_ERR(0, 653, __pyx_L1_error)
   }
-  __pyx_t_12 = PyFloat_FromDouble((__pyx_t_10 / GAL_PI)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 651, __pyx_L1_error)
+  __pyx_t_12 = PyFloat_FromDouble((__pyx_t_10 / GAL_PI)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 653, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __pyx_t_13 = PyTuple_New(3); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 651, __pyx_L1_error)
+  __pyx_t_13 = PyTuple_New(3); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 653, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_2);
@@ -4816,7 +4816,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_t_13 = 0;
   goto __pyx_L0;
 
-  /* "psgp4gm.pyx":518
+  /* "psgp4gm.pyx":520
  * """
  * 
  * def sun_position(y, m, d, hh, mm, ss, lng, lat, height):             # <<<<<<<<<<<<<<
@@ -4838,7 +4838,7 @@ static PyObject *__pyx_pf_7psgp4gm_8sun_position(CYTHON_UNUSED PyObject *__pyx_s
   return __pyx_r;
 }
 
-/* "psgp4gm.pyx":657
+/* "psgp4gm.pyx":659
  *   Calculate orbit number for the given date/time.
  * """
  * def calculate_orbit_number(norm_epoc):             # <<<<<<<<<<<<<<
@@ -4882,7 +4882,7 @@ static PyObject *__pyx_pf_7psgp4gm_10calculate_orbit_number(CYTHON_UNUSED PyObje
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calculate_orbit_number", 0);
 
-  /* "psgp4gm.pyx":667
+  /* "psgp4gm.pyx":669
  *   cdef int orbit_number
  * 
  *   if tle.ecco < 1:             # <<<<<<<<<<<<<<
@@ -4892,7 +4892,7 @@ static PyObject *__pyx_pf_7psgp4gm_10calculate_orbit_number(CYTHON_UNUSED PyObje
   __pyx_t_1 = ((__pyx_v_7psgp4gm_tle.ecco < 1.0) != 0);
   if (__pyx_t_1) {
 
-    /* "psgp4gm.pyx":668
+    /* "psgp4gm.pyx":670
  * 
  *   if tle.ecco < 1:
  *     ascending_node_true_anomaly = 360.0 - tle.argpo             # <<<<<<<<<<<<<<
@@ -4901,7 +4901,7 @@ static PyObject *__pyx_pf_7psgp4gm_10calculate_orbit_number(CYTHON_UNUSED PyObje
  */
     __pyx_v_ascending_node_true_anomaly = (360.0 - __pyx_v_7psgp4gm_tle.argpo);
 
-    /* "psgp4gm.pyx":669
+    /* "psgp4gm.pyx":671
  *   if tle.ecco < 1:
  *     ascending_node_true_anomaly = 360.0 - tle.argpo
  *     ecco_anomaly = gal_ta2ea(ascending_node_true_anomaly/180.0*GAL_PI,tle.ecco)             # <<<<<<<<<<<<<<
@@ -4910,7 +4910,7 @@ static PyObject *__pyx_pf_7psgp4gm_10calculate_orbit_number(CYTHON_UNUSED PyObje
  */
     __pyx_v_ecco_anomaly = gal_ta2ea(((__pyx_v_ascending_node_true_anomaly / 180.0) * GAL_PI), __pyx_v_7psgp4gm_tle.ecco);
 
-    /* "psgp4gm.pyx":670
+    /* "psgp4gm.pyx":672
  *     ascending_node_true_anomaly = 360.0 - tle.argpo
  *     ecco_anomaly = gal_ta2ea(ascending_node_true_anomaly/180.0*GAL_PI,tle.ecco)
  *     mean_anomaly_rad = ecco_anomaly - tle.ecco*sin(ecco_anomaly)             # <<<<<<<<<<<<<<
@@ -4919,7 +4919,7 @@ static PyObject *__pyx_pf_7psgp4gm_10calculate_orbit_number(CYTHON_UNUSED PyObje
  */
     __pyx_v_mean_anomaly_rad = (__pyx_v_ecco_anomaly - (__pyx_v_7psgp4gm_tle.ecco * sin(__pyx_v_ecco_anomaly)));
 
-    /* "psgp4gm.pyx":671
+    /* "psgp4gm.pyx":673
  *     ecco_anomaly = gal_ta2ea(ascending_node_true_anomaly/180.0*GAL_PI,tle.ecco)
  *     mean_anomaly_rad = ecco_anomaly - tle.ecco*sin(ecco_anomaly)
  *     if mean_anomaly_rad < 0:             # <<<<<<<<<<<<<<
@@ -4929,7 +4929,7 @@ static PyObject *__pyx_pf_7psgp4gm_10calculate_orbit_number(CYTHON_UNUSED PyObje
     __pyx_t_1 = ((__pyx_v_mean_anomaly_rad < 0.0) != 0);
     if (__pyx_t_1) {
 
-      /* "psgp4gm.pyx":672
+      /* "psgp4gm.pyx":674
  *     mean_anomaly_rad = ecco_anomaly - tle.ecco*sin(ecco_anomaly)
  *     if mean_anomaly_rad < 0:
  *       mean_anomaly_rad += 2.0 * GAL_PI             # <<<<<<<<<<<<<<
@@ -4938,7 +4938,7 @@ static PyObject *__pyx_pf_7psgp4gm_10calculate_orbit_number(CYTHON_UNUSED PyObje
  */
       __pyx_v_mean_anomaly_rad = (__pyx_v_mean_anomaly_rad + (2.0 * GAL_PI));
 
-      /* "psgp4gm.pyx":671
+      /* "psgp4gm.pyx":673
  *     ecco_anomaly = gal_ta2ea(ascending_node_true_anomaly/180.0*GAL_PI,tle.ecco)
  *     mean_anomaly_rad = ecco_anomaly - tle.ecco*sin(ecco_anomaly)
  *     if mean_anomaly_rad < 0:             # <<<<<<<<<<<<<<
@@ -4947,7 +4947,7 @@ static PyObject *__pyx_pf_7psgp4gm_10calculate_orbit_number(CYTHON_UNUSED PyObje
  */
     }
 
-    /* "psgp4gm.pyx":673
+    /* "psgp4gm.pyx":675
  *     if mean_anomaly_rad < 0:
  *       mean_anomaly_rad += 2.0 * GAL_PI
  *     ascending_node_mean_anomaly = mean_anomaly_rad*180.0/GAL_PI             # <<<<<<<<<<<<<<
@@ -4957,11 +4957,11 @@ static PyObject *__pyx_pf_7psgp4gm_10calculate_orbit_number(CYTHON_UNUSED PyObje
     __pyx_t_2 = (__pyx_v_mean_anomaly_rad * 180.0);
     if (unlikely(GAL_PI == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 673, __pyx_L1_error)
+      __PYX_ERR(0, 675, __pyx_L1_error)
     }
     __pyx_v_ascending_node_mean_anomaly = (__pyx_t_2 / GAL_PI);
 
-    /* "psgp4gm.pyx":674
+    /* "psgp4gm.pyx":676
  *       mean_anomaly_rad += 2.0 * GAL_PI
  *     ascending_node_mean_anomaly = mean_anomaly_rad*180.0/GAL_PI
  *     if ascending_node_mean_anomaly <= tle.mo:             # <<<<<<<<<<<<<<
@@ -4971,7 +4971,7 @@ static PyObject *__pyx_pf_7psgp4gm_10calculate_orbit_number(CYTHON_UNUSED PyObje
     __pyx_t_1 = ((__pyx_v_ascending_node_mean_anomaly <= __pyx_v_7psgp4gm_tle.mo) != 0);
     if (__pyx_t_1) {
 
-      /* "psgp4gm.pyx":675
+      /* "psgp4gm.pyx":677
  *     ascending_node_mean_anomaly = mean_anomaly_rad*180.0/GAL_PI
  *     if ascending_node_mean_anomaly <= tle.mo:
  *       mean_anomaly_difference = tle.mo - ascending_node_mean_anomaly             # <<<<<<<<<<<<<<
@@ -4980,7 +4980,7 @@ static PyObject *__pyx_pf_7psgp4gm_10calculate_orbit_number(CYTHON_UNUSED PyObje
  */
       __pyx_v_mean_anomaly_difference = (__pyx_v_7psgp4gm_tle.mo - __pyx_v_ascending_node_mean_anomaly);
 
-      /* "psgp4gm.pyx":674
+      /* "psgp4gm.pyx":676
  *       mean_anomaly_rad += 2.0 * GAL_PI
  *     ascending_node_mean_anomaly = mean_anomaly_rad*180.0/GAL_PI
  *     if ascending_node_mean_anomaly <= tle.mo:             # <<<<<<<<<<<<<<
@@ -4990,7 +4990,7 @@ static PyObject *__pyx_pf_7psgp4gm_10calculate_orbit_number(CYTHON_UNUSED PyObje
       goto __pyx_L5;
     }
 
-    /* "psgp4gm.pyx":677
+    /* "psgp4gm.pyx":679
  *       mean_anomaly_difference = tle.mo - ascending_node_mean_anomaly
  *     else:
  *       mean_anomaly_difference = tle.mo + 360.0 - ascending_node_mean_anomaly             # <<<<<<<<<<<<<<
@@ -5002,7 +5002,7 @@ static PyObject *__pyx_pf_7psgp4gm_10calculate_orbit_number(CYTHON_UNUSED PyObje
     }
     __pyx_L5:;
 
-    /* "psgp4gm.pyx":679
+    /* "psgp4gm.pyx":681
  *       mean_anomaly_difference = tle.mo + 360.0 - ascending_node_mean_anomaly
  * 
  *     norm_epoc_at_ascending_node = tle_norm_epoc - (mean_anomaly_difference / 360.0 / tle.no)             # <<<<<<<<<<<<<<
@@ -5012,39 +5012,39 @@ static PyObject *__pyx_pf_7psgp4gm_10calculate_orbit_number(CYTHON_UNUSED PyObje
     __pyx_t_2 = (__pyx_v_mean_anomaly_difference / 360.0);
     if (unlikely(__pyx_v_7psgp4gm_tle.no == 0)) {
       PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-      __PYX_ERR(0, 679, __pyx_L1_error)
+      __PYX_ERR(0, 681, __pyx_L1_error)
     }
     __pyx_v_norm_epoc_at_ascending_node = (__pyx_v_7psgp4gm_tle_norm_epoc - (__pyx_t_2 / __pyx_v_7psgp4gm_tle.no));
 
-    /* "psgp4gm.pyx":680
+    /* "psgp4gm.pyx":682
  * 
  *     norm_epoc_at_ascending_node = tle_norm_epoc - (mean_anomaly_difference / 360.0 / tle.no)
  *     orbit_number = tle.revnum + (norm_epoc - norm_epoc_at_ascending_node) * tle.no             # <<<<<<<<<<<<<<
  *   else:
  *     orbit_number = -1
  */
-    __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_7psgp4gm_tle.revnum); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 680, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_7psgp4gm_tle.revnum); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 682, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_norm_epoc_at_ascending_node); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 680, __pyx_L1_error)
+    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_norm_epoc_at_ascending_node); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 682, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = PyNumber_Subtract(__pyx_v_norm_epoc, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 680, __pyx_L1_error)
+    __pyx_t_5 = PyNumber_Subtract(__pyx_v_norm_epoc, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 682, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_7psgp4gm_tle.no); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 680, __pyx_L1_error)
+    __pyx_t_4 = PyFloat_FromDouble(__pyx_v_7psgp4gm_tle.no); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 682, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_6 = PyNumber_Multiply(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 680, __pyx_L1_error)
+    __pyx_t_6 = PyNumber_Multiply(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 682, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = PyNumber_Add(__pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 680, __pyx_L1_error)
+    __pyx_t_4 = PyNumber_Add(__pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 682, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_4); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 680, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyInt_As_int(__pyx_t_4); if (unlikely((__pyx_t_7 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 682, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_orbit_number = __pyx_t_7;
 
-    /* "psgp4gm.pyx":667
+    /* "psgp4gm.pyx":669
  *   cdef int orbit_number
  * 
  *   if tle.ecco < 1:             # <<<<<<<<<<<<<<
@@ -5054,7 +5054,7 @@ static PyObject *__pyx_pf_7psgp4gm_10calculate_orbit_number(CYTHON_UNUSED PyObje
     goto __pyx_L3;
   }
 
-  /* "psgp4gm.pyx":682
+  /* "psgp4gm.pyx":684
  *     orbit_number = tle.revnum + (norm_epoc - norm_epoc_at_ascending_node) * tle.no
  *   else:
  *     orbit_number = -1             # <<<<<<<<<<<<<<
@@ -5066,19 +5066,19 @@ static PyObject *__pyx_pf_7psgp4gm_10calculate_orbit_number(CYTHON_UNUSED PyObje
   }
   __pyx_L3:;
 
-  /* "psgp4gm.pyx":684
+  /* "psgp4gm.pyx":686
  *     orbit_number = -1
  * 
  *   return orbit_number             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_orbit_number); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_orbit_number); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 686, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_r = __pyx_t_4;
   __pyx_t_4 = 0;
   goto __pyx_L0;
 
-  /* "psgp4gm.pyx":657
+  /* "psgp4gm.pyx":659
  *   Calculate orbit number for the given date/time.
  * """
  * def calculate_orbit_number(norm_epoc):             # <<<<<<<<<<<<<<
@@ -5280,77 +5280,77 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "psgp4gm.pyx":269
+  /* "psgp4gm.pyx":271
  *        f..f - is time of the day as a fraction of 24 hours
  * """
  * def epoc2norm(yy, ddd):             # <<<<<<<<<<<<<<
  *   cdef int year
  *   cdef int days
  */
-  __pyx_tuple_ = PyTuple_Pack(5, __pyx_n_s_yy, __pyx_n_s_ddd, __pyx_n_s_year, __pyx_n_s_days, __pyx_n_s_r); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(5, __pyx_n_s_yy, __pyx_n_s_ddd, __pyx_n_s_year, __pyx_n_s_days, __pyx_n_s_r); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
-  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_psgp4gm_pyx, __pyx_n_s_epoc2norm, 269, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(2, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_psgp4gm_pyx, __pyx_n_s_epoc2norm, 271, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 271, __pyx_L1_error)
 
-  /* "psgp4gm.pyx":292
+  /* "psgp4gm.pyx":294
  * """
  * 
  * def init_wgs72(card1, card2, latitude, longitude, height):             # <<<<<<<<<<<<<<
  * 
  *   global sgp4, sgp4orig
  */
-  __pyx_tuple__3 = PyTuple_Pack(14, __pyx_n_s_card1, __pyx_n_s_card2, __pyx_n_s_latitude, __pyx_n_s_longitude, __pyx_n_s_height, __pyx_n_s_rc, __pyx_n_s_status, __pyx_n_s_gm72, __pyx_n_s_tumin, __pyx_n_s_xke, __pyx_n_s_j2, __pyx_n_s_j3, __pyx_n_s_j4, __pyx_n_s_j3oj2); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(14, __pyx_n_s_card1, __pyx_n_s_card2, __pyx_n_s_latitude, __pyx_n_s_longitude, __pyx_n_s_height, __pyx_n_s_rc, __pyx_n_s_status, __pyx_n_s_gm72, __pyx_n_s_tumin, __pyx_n_s_xke, __pyx_n_s_j2, __pyx_n_s_j3, __pyx_n_s_j4, __pyx_n_s_j3oj2); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 294, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(5, 0, 14, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_psgp4gm_pyx, __pyx_n_s_init_wgs72, 292, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(5, 0, 14, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_psgp4gm_pyx, __pyx_n_s_init_wgs72, 294, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 294, __pyx_L1_error)
 
-  /* "psgp4gm.pyx":365
+  /* "psgp4gm.pyx":367
  * """
  * 
  * def get_position(y, m, d, hh, mm, ss):             # <<<<<<<<<<<<<<
  * 
  *   global sgp4
  */
-  __pyx_tuple__5 = PyTuple_Pack(26, __pyx_n_s_y, __pyx_n_s_m, __pyx_n_s_d, __pyx_n_s_hh, __pyx_n_s_mm, __pyx_n_s_ss, __pyx_n_s_e1, __pyx_n_s_e2, __pyx_n_s_status, __pyx_n_s_pv, __pyx_n_s_s, __pyx_n_s_efg, __pyx_n_s_sr, __pyx_n_s_srunit, __pyx_n_s_srmod, __pyx_n_s_rho, __pyx_n_s_az, __pyx_n_s_sel, __pyx_n_s_elev, __pyx_n_s_dist, __pyx_n_s_year, __pyx_n_s_month, __pyx_n_s_day, __pyx_n_s_hr, __pyx_n_s_min, __pyx_n_s_sec); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 365, __pyx_L1_error)
+  __pyx_tuple__5 = PyTuple_Pack(26, __pyx_n_s_y, __pyx_n_s_m, __pyx_n_s_d, __pyx_n_s_hh, __pyx_n_s_mm, __pyx_n_s_ss, __pyx_n_s_e1, __pyx_n_s_e2, __pyx_n_s_status, __pyx_n_s_pv, __pyx_n_s_s, __pyx_n_s_efg, __pyx_n_s_sr, __pyx_n_s_srunit, __pyx_n_s_srmod, __pyx_n_s_rho, __pyx_n_s_az, __pyx_n_s_sel, __pyx_n_s_elev, __pyx_n_s_dist, __pyx_n_s_year, __pyx_n_s_month, __pyx_n_s_day, __pyx_n_s_hr, __pyx_n_s_min, __pyx_n_s_sec); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
-  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(6, 0, 26, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_psgp4gm_pyx, __pyx_n_s_get_position, 365, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 365, __pyx_L1_error)
+  __pyx_codeobj__6 = (PyObject*)__Pyx_PyCode_New(6, 0, 26, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__5, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_psgp4gm_pyx, __pyx_n_s_get_position, 367, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__6)) __PYX_ERR(0, 367, __pyx_L1_error)
 
-  /* "psgp4gm.pyx":438
+  /* "psgp4gm.pyx":440
  * """
  * 
  * def find_rise_set(y, m, d, hh, mm, ss, minel, daysfwd):             # <<<<<<<<<<<<<<
  * 
  *   global sgp4orig
  */
-  __pyx_tuple__7 = PyTuple_Pack(42, __pyx_n_s_y, __pyx_n_s_m, __pyx_n_s_d, __pyx_n_s_hh, __pyx_n_s_mm, __pyx_n_s_ss, __pyx_n_s_minel, __pyx_n_s_daysfwd, __pyx_n_s_sgp4l, __pyx_n_s_status, __pyx_n_s_rminel, __pyx_n_s_days, __pyx_n_s_year, __pyx_n_s_month, __pyx_n_s_day, __pyx_n_s_hr, __pyx_n_s_min, __pyx_n_s_sec, __pyx_n_s_iy1, __pyx_n_s_im1, __pyx_n_s_id1, __pyx_n_s_iy2, __pyx_n_s_im2, __pyx_n_s_id2, __pyx_n_s_iy3, __pyx_n_s_im3, __pyx_n_s_id3, __pyx_n_s_time1, __pyx_n_s_time2, __pyx_n_s_time3, __pyx_n_s_ihh1, __pyx_n_s_imm1, __pyx_n_s_iss1, __pyx_n_s_ihh2, __pyx_n_s_imm2, __pyx_n_s_iss2, __pyx_n_s_ihh3, __pyx_n_s_imm3, __pyx_n_s_iss3, __pyx_n_s_passinfo, __pyx_n_s_epoch1, __pyx_n_s_epoch2); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 438, __pyx_L1_error)
+  __pyx_tuple__7 = PyTuple_Pack(42, __pyx_n_s_y, __pyx_n_s_m, __pyx_n_s_d, __pyx_n_s_hh, __pyx_n_s_mm, __pyx_n_s_ss, __pyx_n_s_minel, __pyx_n_s_daysfwd, __pyx_n_s_sgp4l, __pyx_n_s_status, __pyx_n_s_rminel, __pyx_n_s_days, __pyx_n_s_year, __pyx_n_s_month, __pyx_n_s_day, __pyx_n_s_hr, __pyx_n_s_min, __pyx_n_s_sec, __pyx_n_s_iy1, __pyx_n_s_im1, __pyx_n_s_id1, __pyx_n_s_iy2, __pyx_n_s_im2, __pyx_n_s_id2, __pyx_n_s_iy3, __pyx_n_s_im3, __pyx_n_s_id3, __pyx_n_s_time1, __pyx_n_s_time2, __pyx_n_s_time3, __pyx_n_s_ihh1, __pyx_n_s_imm1, __pyx_n_s_iss1, __pyx_n_s_ihh2, __pyx_n_s_imm2, __pyx_n_s_iss2, __pyx_n_s_ihh3, __pyx_n_s_imm3, __pyx_n_s_iss3, __pyx_n_s_passinfo, __pyx_n_s_epoch1, __pyx_n_s_epoch2); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 440, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
-  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(8, 0, 42, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_psgp4gm_pyx, __pyx_n_s_find_rise_set, 438, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 438, __pyx_L1_error)
+  __pyx_codeobj__8 = (PyObject*)__Pyx_PyCode_New(8, 0, 42, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__7, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_psgp4gm_pyx, __pyx_n_s_find_rise_set, 440, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__8)) __PYX_ERR(0, 440, __pyx_L1_error)
 
-  /* "psgp4gm.pyx":518
+  /* "psgp4gm.pyx":520
  * """
  * 
  * def sun_position(y, m, d, hh, mm, ss, lng, lat, height):             # <<<<<<<<<<<<<<
  * 
  *   cdef int year, month, day
  */
-  __pyx_tuple__9 = PyTuple_Pack(38, __pyx_n_s_y, __pyx_n_s_m, __pyx_n_s_d, __pyx_n_s_hh, __pyx_n_s_mm, __pyx_n_s_ss, __pyx_n_s_lng, __pyx_n_s_lat, __pyx_n_s_height, __pyx_n_s_year, __pyx_n_s_month, __pyx_n_s_day, __pyx_n_s_hr, __pyx_n_s_min, __pyx_n_s_sec, __pyx_n_s_status, __pyx_n_s_epoch1, __pyx_n_s_epoch2, __pyx_n_s_pv, __pyx_n_s_itrf, __pyx_n_s_xyz, __pyx_n_s_sun, __pyx_n_s_elong, __pyx_n_s_phi, __pyx_n_s_h, __pyx_n_s_a, __pyx_n_s_b, __pyx_n_s_c, __pyx_n_s_t, __pyx_n_s_p, __pyx_n_s_n, __pyx_n_s_u, __pyx_n_s_w, __pyx_n_s_r, __pyx_n_s_tv, __pyx_n_s_alpha, __pyx_n_s_gamma, __pyx_n_s_visible); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 518, __pyx_L1_error)
+  __pyx_tuple__9 = PyTuple_Pack(38, __pyx_n_s_y, __pyx_n_s_m, __pyx_n_s_d, __pyx_n_s_hh, __pyx_n_s_mm, __pyx_n_s_ss, __pyx_n_s_lng, __pyx_n_s_lat, __pyx_n_s_height, __pyx_n_s_year, __pyx_n_s_month, __pyx_n_s_day, __pyx_n_s_hr, __pyx_n_s_min, __pyx_n_s_sec, __pyx_n_s_status, __pyx_n_s_epoch1, __pyx_n_s_epoch2, __pyx_n_s_pv, __pyx_n_s_itrf, __pyx_n_s_xyz, __pyx_n_s_sun, __pyx_n_s_elong, __pyx_n_s_phi, __pyx_n_s_h, __pyx_n_s_a, __pyx_n_s_b, __pyx_n_s_c, __pyx_n_s_t, __pyx_n_s_p, __pyx_n_s_n, __pyx_n_s_u, __pyx_n_s_w, __pyx_n_s_r, __pyx_n_s_tv, __pyx_n_s_alpha, __pyx_n_s_gamma, __pyx_n_s_visible); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 520, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
-  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(9, 0, 38, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_psgp4gm_pyx, __pyx_n_s_sun_position, 518, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 518, __pyx_L1_error)
+  __pyx_codeobj__10 = (PyObject*)__Pyx_PyCode_New(9, 0, 38, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__9, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_psgp4gm_pyx, __pyx_n_s_sun_position, 520, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__10)) __PYX_ERR(0, 520, __pyx_L1_error)
 
-  /* "psgp4gm.pyx":657
+  /* "psgp4gm.pyx":659
  *   Calculate orbit number for the given date/time.
  * """
  * def calculate_orbit_number(norm_epoc):             # <<<<<<<<<<<<<<
  * 
  *   global tle
  */
-  __pyx_tuple__11 = PyTuple_Pack(8, __pyx_n_s_norm_epoc, __pyx_n_s_ecco_anomaly, __pyx_n_s_mean_anomaly_rad, __pyx_n_s_mean_anomaly_difference, __pyx_n_s_ascending_node_true_anomaly, __pyx_n_s_norm_epoc_at_ascending_node, __pyx_n_s_orbit_number, __pyx_n_s_ascending_node_mean_anomaly); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 657, __pyx_L1_error)
+  __pyx_tuple__11 = PyTuple_Pack(8, __pyx_n_s_norm_epoc, __pyx_n_s_ecco_anomaly, __pyx_n_s_mean_anomaly_rad, __pyx_n_s_mean_anomaly_difference, __pyx_n_s_ascending_node_true_anomaly, __pyx_n_s_norm_epoc_at_ascending_node, __pyx_n_s_orbit_number, __pyx_n_s_ascending_node_mean_anomaly); if (unlikely(!__pyx_tuple__11)) __PYX_ERR(0, 659, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
-  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_psgp4gm_pyx, __pyx_n_s_calculate_orbit_number, 657, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 657, __pyx_L1_error)
+  __pyx_codeobj__12 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__11, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_psgp4gm_pyx, __pyx_n_s_calculate_orbit_number, 659, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__12)) __PYX_ERR(0, 659, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -5635,76 +5635,76 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "psgp4gm.pyx":269
+  /* "psgp4gm.pyx":271
  *        f..f - is time of the day as a fraction of 24 hours
  * """
  * def epoc2norm(yy, ddd):             # <<<<<<<<<<<<<<
  *   cdef int year
  *   cdef int days
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7psgp4gm_1epoc2norm, NULL, __pyx_n_s_psgp4gm); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7psgp4gm_1epoc2norm, NULL, __pyx_n_s_psgp4gm); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_epoc2norm, __pyx_t_1) < 0) __PYX_ERR(0, 269, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_epoc2norm, __pyx_t_1) < 0) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "psgp4gm.pyx":292
+  /* "psgp4gm.pyx":294
  * """
  * 
  * def init_wgs72(card1, card2, latitude, longitude, height):             # <<<<<<<<<<<<<<
  * 
  *   global sgp4, sgp4orig
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7psgp4gm_3init_wgs72, NULL, __pyx_n_s_psgp4gm); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7psgp4gm_3init_wgs72, NULL, __pyx_n_s_psgp4gm); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 294, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_init_wgs72, __pyx_t_1) < 0) __PYX_ERR(0, 292, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_init_wgs72, __pyx_t_1) < 0) __PYX_ERR(0, 294, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "psgp4gm.pyx":365
+  /* "psgp4gm.pyx":367
  * """
  * 
  * def get_position(y, m, d, hh, mm, ss):             # <<<<<<<<<<<<<<
  * 
  *   global sgp4
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7psgp4gm_5get_position, NULL, __pyx_n_s_psgp4gm); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 365, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7psgp4gm_5get_position, NULL, __pyx_n_s_psgp4gm); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_position, __pyx_t_1) < 0) __PYX_ERR(0, 365, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_get_position, __pyx_t_1) < 0) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "psgp4gm.pyx":438
+  /* "psgp4gm.pyx":440
  * """
  * 
  * def find_rise_set(y, m, d, hh, mm, ss, minel, daysfwd):             # <<<<<<<<<<<<<<
  * 
  *   global sgp4orig
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7psgp4gm_7find_rise_set, NULL, __pyx_n_s_psgp4gm); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 438, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7psgp4gm_7find_rise_set, NULL, __pyx_n_s_psgp4gm); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 440, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_find_rise_set, __pyx_t_1) < 0) __PYX_ERR(0, 438, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_find_rise_set, __pyx_t_1) < 0) __PYX_ERR(0, 440, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "psgp4gm.pyx":518
+  /* "psgp4gm.pyx":520
  * """
  * 
  * def sun_position(y, m, d, hh, mm, ss, lng, lat, height):             # <<<<<<<<<<<<<<
  * 
  *   cdef int year, month, day
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7psgp4gm_9sun_position, NULL, __pyx_n_s_psgp4gm); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 518, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7psgp4gm_9sun_position, NULL, __pyx_n_s_psgp4gm); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 520, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_sun_position, __pyx_t_1) < 0) __PYX_ERR(0, 518, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_sun_position, __pyx_t_1) < 0) __PYX_ERR(0, 520, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "psgp4gm.pyx":657
+  /* "psgp4gm.pyx":659
  *   Calculate orbit number for the given date/time.
  * """
  * def calculate_orbit_number(norm_epoc):             # <<<<<<<<<<<<<<
  * 
  *   global tle
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7psgp4gm_11calculate_orbit_number, NULL, __pyx_n_s_psgp4gm); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 657, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_7psgp4gm_11calculate_orbit_number, NULL, __pyx_n_s_psgp4gm); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 659, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_calculate_orbit_number, __pyx_t_1) < 0) __PYX_ERR(0, 657, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_calculate_orbit_number, __pyx_t_1) < 0) __PYX_ERR(0, 659, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "psgp4gm.pyx":1
