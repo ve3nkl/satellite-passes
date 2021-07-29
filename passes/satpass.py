@@ -35,43 +35,20 @@ import satools.SAConfig as sc
 import satools.SAGeo as sg
 from psgp4gm import psgp4gm
 
-# Determine number of days in a year
-
-def days_in_year(year):
-  if year % 4 == 0:
-    if year % 100 != 0:
-      days = 366
-    elif year % 400 != 0:
-      days = 365
-    else:
-      days = 366
-  else:
-    days = 365
-  return days
-
-# Convert datetime object into epoc format
-
-def dt_eps_diff(dt2, eps1):
-  yd1 = decimal.Decimal(eps1[2:5])
-  r1  = decimal.Decimal("0" + eps1[5:]) + (yd1-1)
   
-  t2 = dt2.timetuple()
-  yr2 = t2[0]
-  yd2 = t2[7]
-  hr2 = t2[3]
-  mn2 = t2[4]
-  sc2 = t2[5]
-  r2  = decimal.Decimal(sc2 + mn2 * 60 + hr2 * 3600) / decimal.Decimal(86400) + (decimal.Decimal(yd2-1))
+"""
+  Convert datetime to normalized epoc (see psgp4gm.epoc2norm for details)
+"""
+def dt2norm(dt):
+  year, month, day, hour, minute, second, wday, yday, dst = dt.timetuple()
+  if year < 1960 or year > 2059:
+    raise Exception("datetime is out of valid range: " + str(dt))
+  e = yday + ((( hour * 60 + minute ) * 60 + second) / (24 * 60 * 60))
+  return psgp4gm.epoc2norm(year, e)
 
-  if yd2 < yd1:
-    diff = r2 + days_in_year(yr2-1)
-  else:
-    diff = r2 - r1
-
-  return diff
-  
-# Validate date in the format yyyy-mm-dd
-
+"""  
+  Validate date in the format yyyy-mm-dd
+"""
 def valid_date(s):
   formats = [
     "%b %d,%Y",
@@ -92,8 +69,9 @@ def valid_date(s):
   msg = "Not a valid date: '{0}'.".format(s)
   raise argparse.ArgumentTypeError(msg)
   
-# Validate hour interval, for example: 1-3, 9-18, 23-05.
-
+"""  
+  Validate hour interval, for example: 1-3, 9-18, 23-05.
+"""
 def valid_interval(s):
   tokens = s.split("-")
   if len(tokens) == 2:
@@ -106,9 +84,10 @@ def valid_interval(s):
         return (n_from, n_to)
   msg = "Not a valid hour interval: '{0}'.".format(s)
   raise argparse.ArgumentTypeError(msg)
-       
-# Validate time zone offset (-12:00 to 12:00 with 15 minute intervals)
-
+  
+"""       
+  Validate time zone offset (-12:00 to 12:00 with 15 minute intervals)
+"""
 def valid_zone_offset(s):
   sign = 1
   if len(s) > 0 and s[0:1] == "-":
@@ -124,8 +103,9 @@ def valid_zone_offset(s):
   msg = "Not a valid time zone offset: '{0}'.".format(s)
   raise argparse.ArgumentTypeError(msg)
 
-# Validate maidenhead grid (4, 6 or 8 characters)
-
+"""
+  Validate maidenhead grid (4, 6 or 8 characters)
+"""
 def valid_grid(s):
   try:
     g = sg.MHGridSquare(s)
@@ -134,8 +114,9 @@ def valid_grid(s):
     quit(1)
   return g 
   
-# Validate altitude
-
+"""  
+  Validate altitude
+"""
 def valid_altitude(s):
   in_meters = True
   if len(s) >= 2 and s[-1:] == "m":
@@ -156,13 +137,11 @@ def valid_altitude(s):
   msg = "Not a valid altitude: '{0}'.".format(s)
   raise argparse.ArgumentTypeError(msg)
 
-
-# Main line logic. It is called when the module is called as a command with parameters and it can also be called
-# directly when the module is imported. This function returns a tuple containing a return code, a list of lines for
-# stdout and a list of lines for stderr.
-
-#def main_line(qth_file="", tle_dir, sat_objects, start=str(datetime.datetime.utcnow()).split(" ")[0], period="1", tz="U", tz_offset=datetime.timedelta(hours=0), tz_string="0", min_elev=0, between="0-24"):
-
+"""
+  Main line logic. It is called when the module is called as a command with parameters and it can also be called
+  directly when the module is imported. This function returns a tuple containing a return code, a list of lines for
+  stdout and a list of lines for stderr.
+"""
 def main_line(tle_dir, sat_objects, spot_name, spot_object, altitude, time_zone_delta, starting, period, max_elevation, between_hours):
 
   rc = 0
@@ -265,21 +244,18 @@ def main_line(tle_dir, sat_objects, spot_name, spot_object, altitude, time_zone_
                ((between_hours[0] < between_hours[1]) and (set_datetime2.hour >= between_hours[0] and rise_datetime2.hour < between_hours[1])) or \
                ((between_hours[0] > between_hours[1]) and (set_datetime2.hour >= between_hours[0] or rise_datetime2.hour < between_hours[1])):
       
-              """
-              # Attempt to calculate orbit number. It does not produce the desired result. Need more time to figure this out...
-              tle_epoc         = data[1][18:32]
-              tle_revolution_n = decimal.Decimal((data[2][63:68]).strip())
-              tle_mean_motion  = decimal.Decimal((data[2][52:63]).strip())
-              tle_mean_anomaly = decimal.Decimal((data[2][43:51]).strip())
-              orbit_n = ((dt_eps_diff(rise_datetime, tle_epoc)) * tle_mean_motion + (tle_revolution_n + tle_mean_anomaly / decimal.Decimal(360))).quantize(decimal.Decimal('1.'), rounding=decimal.ROUND_DOWN)
-              """
+              # Calculate orbit number.
+              orbit_s = ""
+              orbit_n = psgp4gm.calculate_orbit_number(dt2norm(rise_datetime))
+              if orbit_n >= 0:
+                orbit_s = str(orbit_n)
               
               o = {'sat-pass':{'QTH':spot_name.strip(),
                    'satellite':data[0].strip(),
                    'satellite-user-name': sat_name,
                    'time-zone': tzstr,
                    'rise-date':rise_datetime2.strftime("%b %d, %Y"),
-                   'rise-orbit': "",
+                   'rise-orbit': orbit_s,
                    'rise-info':{'time':rise_datetime2.strftime("%H:%M:%S"), 'azimuth':str(rise_azimuth.quantize(decimal.Decimal('.1')))},
                    'max-info':{'time':max_datetime2.strftime("%H:%M:%S"), 'azimuth':str(max_azimuth.quantize(decimal.Decimal('.1'))), 'elevation':str(max_angle.quantize(decimal.Decimal('.1')))},
                    'set-info':{'time':set_datetime2.strftime("%H:%M:%S"), 'azimuth':str(set_azimuth.quantize(decimal.Decimal('.1')))} }}

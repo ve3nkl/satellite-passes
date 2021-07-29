@@ -294,14 +294,13 @@ def genPass(cnvs, scl, cx, cy, title, tz_offset_str, satellite, rise_dt, set_dt,
   cnvs.text(max_txt_x, max_txt_y - 10 / scl, str(max_azimuth), [text.size.footnotesize, text.valign.top, text.halign.left])  
   cnvs.text(max_txt_x, max_txt_y - 20 / scl, max_elev_str2, [text.size.footnotesize, text.valign.top, text.halign.left])
 
-# Because 'satpass' does not calculate orbit correctly, the following code fragment is commented out.
-
 # Insert orbit #
-#
-#  orb_txt_x = sat_circle_x / scl + main_circle_r / scl
-#  orb_txt_y = sat_circle_y / scl + main_circle_r / scl
-#  cnvs.text(orb_txt_x, orb_txt_y, "Orbit", [text.size.footnotesize, text.valign.top, text.halign.right])
-#  cnvs.text(orb_txt_x, orb_txt_y - 10 / scl, orbit_n, [text.size.footnotesize, text.valign.top, text.halign.right])
+
+  if orbit_n != "":
+    orb_txt_x = sat_circle_x / scl + main_circle_r / scl
+    orb_txt_y = sat_circle_y / scl + main_circle_r / scl
+    cnvs.text(orb_txt_x, orb_txt_y, "Orbit", [text.size.footnotesize, text.valign.top, text.halign.right])
+    cnvs.text(orb_txt_x, orb_txt_y - 10 / scl, orbit_n, [text.size.footnotesize, text.valign.top, text.halign.right])
 
   return 
 

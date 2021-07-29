@@ -23,7 +23,7 @@ SOFTWARE.
 
 -----------------------------------------------------------------------------
 
-Wrapping up gravity model structure initialization.
+Wrapping up gravity model structure initialization and other C routines.
 
 """
 
@@ -33,6 +33,7 @@ cdef extern from "string.h":
   
 cdef extern from "math.h":
 
+  double sin(double)
   double asin(double)
   double fabs(double)
   double atan2(double, double)
@@ -140,7 +141,26 @@ cdef extern from "gal_sgp4.h":
     double pv[2][3]
     pass
   
-  ctypedef struct gal_tle_t  
+  ctypedef struct gal_tle_t:
+    int             satnum         # US Strategic Command Object Number          
+    char            classification # Security Classification                     
+    char            intldesg[12]   # International Designator
+    int             epochyr        # Epoch Year                                  
+    double          epochdays      # Epoch Day of Year (plus Fraction)           
+    double          date1          # UTC date part 1 - normalized                
+    double          date2          # UTC date part 2 - normalized                
+    double          ndot           # Mean motion derivative (rev/day /2)         
+    double          nddot          # Mean motion second derivative (rev/day2 /6) 
+    double          bstar          # Bstar / Drag Term                           
+    int             ephtype        # Ephermeris Type                             
+    int             setnum         # Element set number                          
+    double          inclo          # Inclination                                 
+    double          nodeo          # Right Ascension of Ascending Node (deg)     
+    double          ecco           # Eccentricity                                
+    double          argpo          # Argument of Perigee (deg)                   
+    double          mo             # Mean Anamaly (deg)                          
+    double          no             # Mean Motion (rev/day)                       
+    int             revnum         # Epoch Revolution Number                       
 
   void gal_sgp4(gal_sgp4_t *sgp4, double epoch1, double epoch2, double pv[2][3], gal_status_t* status)
   
@@ -208,6 +228,10 @@ cdef extern from "gal_c2tpv00a.h":
 cdef extern from "gal_gd2gc.h":
   void gal_gd2gc(int n, double elong, double phi, double height, double xyz[3], gal_status_t *status)
   
+cdef extern from "gal_ta2ea.h":
+  
+  double gal_ta2ea(double ta, double ecc)
+  
 # Define Global variables  
 
 cdef gal_sgp4_t sgp4orig
@@ -222,6 +246,48 @@ cdef double observer[3]
 cdef double sez[3][3]
 
 cdef double rlat, rlon, h
+
+cdef gal_tle_t tle
+cdef double tle_norm_epoc
+
+
+"""
+  Convert epoc date into normalized format. Normalized Epoc date/time 
+  can be used in calculations to determine how much time passed between
+  the two date/times.
+   
+  Input has the following format:
+       yy - is a 2-digit year representing year range 1960-2059
+ddd.f...f - is a day of the year starting with 001 and 
+            a time of the day as a fraction of 24 hours
+  
+  Normalized output format is a Decimal number: 
+    nnnnn.ffffffff
+      nnnnn - day # where day 0 is on Jan 01, 1900
+       f..f - is time of the day as a fraction of 24 hours
+"""
+def epoc2norm(yy, ddd):
+  cdef int year
+  cdef int days
+  cdef double r
+  if yy >= 60:
+    year = 1900 + yy   # Assume 20th century: 19xx
+  else:
+    year = 2000 + yy   # Assume 21st century: 20xx
+    
+  days = (<int>ddd)-1  # Number of full days passed in this year
+  if year > 1900:
+    days += (year-1900)*365    # Number of days in previous years with
+    days += (year-1900-1) // 4 # additional days for leap years
+    
+  r = days + (ddd - (<int>ddd))
+  return r
+
+"""
+
+  Initialize satellite orbit data using TLE cards and current location.
+
+"""
     
 def init_wgs72(card1, card2, latitude, longitude, height):
 
@@ -231,10 +297,11 @@ def init_wgs72(card1, card2, latitude, longitude, height):
   global observer
   global sez
   global rlat, rlon, h
+  global tle
+  global tle_norm_epoc
 
   cdef int rc 
   cdef gal_status_t* status
-  cdef gal_tle_t tle
   cdef gal_gm_t* gm72
   
   cdef double tumin
@@ -275,16 +342,25 @@ def init_wgs72(card1, card2, latitude, longitude, height):
   if (status[0].errc <> 0):
     raise Exception, "gal_tledec returned code " + str(status[0].errc)      
 
+  # Convert TLE epoc time to normalized form
+  tle_norm_epoc = epoc2norm(tle.epochyr, tle.epochdays)
+
   gal_sgp4init(gm72, &tle, &sgp4orig, status)
   if (status[0].errc <> 0):
     raise Exception, "gal_sgp4init returned code " + str(status[0].errc)        
-  
+    
   gal_gmfree(gm72)
   sgp4 = sgp4orig
   
   gal_stsfree(status)
 
   return
+  
+"""
+
+  Return satellite position as observed from a location on Earth
+
+"""
   
 def get_position(y, m, d, hh, mm, ss):
 
@@ -351,6 +427,13 @@ def get_position(y, m, d, hh, mm, ss):
   gal_stsfree(status)
   return (e1, e2, az * GAL_R2D, elev * GAL_R2D, sr[0], sr[1], sr[2], dist)
 
+
+"""
+
+  Find the next satellite rise information starting at some point in time.
+  Ignore passes that do not satisfy the minimum elevation criterion.
+
+"""
 
 def find_rise_set(y, m, d, hh, mm, ss, minel, daysfwd):
 
@@ -426,6 +509,11 @@ def find_rise_set(y, m, d, hh, mm, ss, minel, daysfwd):
 
   return ((iy1, im1, id1, ihh1, imm1, iss1, passinfo[0][0]), passinfo[0][1] * GAL_R2D, passinfo[0][2] * GAL_R2D, (iy2, im2, id2, ihh2, imm2, iss2,  passinfo[1][0]), passinfo[1][1] * GAL_R2D, passinfo[1][2] * GAL_R2D, (iy3, im3, id3, ihh3, imm3, iss3,  passinfo[2][0]), passinfo[2][1] * GAL_R2D, passinfo[2][2] * GAL_R2D)
 
+"""
+
+  Calculate Sun position in the sky as viewed by an observer on Earth.
+
+"""
 
 def sun_position(y, m, d, hh, mm, ss, lng, lat, height):
   
@@ -562,3 +650,35 @@ def sun_position(y, m, d, hh, mm, ss, lng, lat, height):
   
   return (visible, alpha * 180.0 / GAL_PI, gamma * 180.0 / GAL_PI)
   
+
+"""
+  Calculate orbit number for the given date/time.
+"""
+def calculate_orbit_number(norm_epoc):
+  
+  global tle
+  cdef double ecco_anomaly
+  cdef double mean_anomaly_rad
+  cdef double mean_anomaly_difference
+  cdef double ascending_node_true_anomaly
+  cdef double norm_epoc_at_ascending_node
+  cdef int orbit_number
+
+  if tle.ecco < 1:
+    ascending_node_true_anomaly = 360.0 - tle.argpo
+    ecco_anomaly = gal_ta2ea(ascending_node_true_anomaly/180.0*GAL_PI,tle.ecco)
+    mean_anomaly_rad = ecco_anomaly - tle.ecco*sin(ecco_anomaly)
+    if mean_anomaly_rad < 0:
+      mean_anomaly_rad += 2.0 * GAL_PI
+    ascending_node_mean_anomaly = mean_anomaly_rad*180.0/GAL_PI
+    if ascending_node_mean_anomaly <= tle.mo:
+      mean_anomaly_difference = tle.mo - ascending_node_mean_anomaly
+    else:
+      mean_anomaly_difference = tle.mo + 360.0 - ascending_node_mean_anomaly
+      
+    norm_epoc_at_ascending_node = tle_norm_epoc - (mean_anomaly_difference / 360.0 / tle.no)
+    orbit_number = tle.revnum + (norm_epoc - norm_epoc_at_ascending_node) * tle.no
+  else:
+    orbit_number = -1
+    
+  return orbit_number
