@@ -21,6 +21,8 @@ SOFTWARE.
 
 - History -------------------------------------------------------------------
 2021/07/28   1.2   Calculate orbit # for elliptical orbits
+2021/07/31   1.3   Determine timezone automatically if it is not 
+                   specified explicitely
 -----------------------------------------------------------------------------
 
 This script calculates and prints details on satellite passes as a yaml document.
@@ -36,8 +38,10 @@ sys.path.append('../')
 import satools.SAConfig as sc
 import satools.SAGeo as sg
 from psgp4gm import psgp4gm
+import pytz
+from timezonefinder import TimezoneFinder
 
-  
+
 """
   Convert datetime to normalized epoc (see psgp4gm.epoc2norm for details)
 """
@@ -372,9 +376,32 @@ if __name__ == "__main__":
       print( )
       quit(1) 
   else:
-    print( "ERROR: Either --time-zone-offset or --qth option needs to be specified." )
-    print( )
-    quit(1)    
+    # Neither time zone nor qth profile is specified, try to detect the time zone based 
+    # on the specified location.
+    tf = TimezoneFinder()
+    timezone_str = tf.timezone_at(lat=spot_object.latitude, lng=spot_object.longitude)
+    
+    if timezone_str is not None:
+      tz_name = timezone_str
+      
+      tz = None
+      try:
+        tz = pytz.timezone(timezone_str)
+      except pytz.exceptions.UnknownTimeZoneError:
+        pass
+      
+      if tz is not None:
+        current_utc       = datetime.datetime.utcnow()
+        current_localized = tz.localize(current_utc)
+        time_zone_delta = current_localized.utcoffset()
+      else:
+        print( "ERROR: Time zone could not be determined, specify either --time-zone-offset or --qth option." )
+        print( )
+        quit(1)    
+    else:
+      print( "ERROR: Time zone could not be determined, specify either --time-zone-offset or --qth option." )
+      print( )
+      quit(1)    
     
   if args.altitude is not None:
     altitude = args.altitude
