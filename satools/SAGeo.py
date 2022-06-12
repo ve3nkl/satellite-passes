@@ -1,5 +1,5 @@
 """
-Copyright (c) 2016-2020, 2021 Nikolai Ozerov (VE3NKL)
+Copyright (c) 2016-2020, 2021, 2022 Nikolai Ozerov (VE3NKL)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -21,7 +21,8 @@ SOFTWARE.
 
 -----------------------------------------------------------------------------
 
-Perform calculations using maidenhead grid squares.
+Perform calculations using maidenhead grid squares as well as Lattitude,Longitude
+coordinates.
 
 """
 
@@ -52,6 +53,11 @@ class Spot:
     geod = Geodesic.WGS84
     g = geod.Inverse(self.latitude, self.longitude, anotherSpot.latitude, anotherSpot.longitude)
     return g["s12"]
+    
+  def distanceAzimuthToAnotherSpot(self, anotherSpot):
+    geod = Geodesic.WGS84
+    g = geod.Inverse(self.latitude, self.longitude, anotherSpot.latitude, anotherSpot.longitude)
+    return (g["s12"],g["azi2"])
     
   def get_MHGrid(self):
     return MHGridSquare.lat_long_to_maiden(self.latitude, self.longitude)
