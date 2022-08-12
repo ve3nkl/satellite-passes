@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster as build
+FROM python:3.9-slim-buster as build
 
 # Install unzip and texlive. The latter one is needed for Python PyX.
 
@@ -22,35 +22,35 @@ RUN make clean
 RUN make
 RUN make install
 
-# Make psgp4gm module written in Cython
+# Make pygal module written in Cython
 
 RUN pip install cython
 
 RUN mkdir /opt/satpass
-RUN mkdir /opt/satpass/psgp4gm
-COPY ./psgp4gm/psgp4gm.pyx /opt/satpass/psgp4gm
-COPY ./psgp4gm/build2.sh /opt/satpass/psgp4gm
-WORKDIR /opt/satpass/psgp4gm
-RUN chmod +x ./build2.sh
-RUN ./build2.sh
+RUN mkdir /opt/satpass/pygal
+COPY ./pygal/pygal.pyx /opt/satpass/pygal
+COPY ./pygal/build.sh /opt/satpass/pygal
+WORKDIR /opt/satpass/pygal
+RUN chmod +x ./build.sh
+RUN ./build.sh
 
 # Start new image
 
-FROM python:3.8-slim-buster as satpass
+FROM python:3.9-slim-buster as satpass
 
 COPY --from=build /opt/libgal-0.6.0/ /opt/libgal-0.6.0 
 
 # Create an appropriate directory structure and copy over SatPass scripts.
 
 RUN mkdir /opt/satpass
-RUN mkdir /opt/satpass/psgp4gm
+RUN mkdir /opt/satpass/pygal
 RUN mkdir /opt/satpass/passes
 RUN mkdir /opt/satpass/passes/data
 RUN mkdir /opt/satpass/satools
-COPY ./psgp4gm/psgp4gm.pyx /opt/satpass/psgp4gm
-COPY ./psgp4gm/build2.sh /opt/satpass/psgp4gm
-RUN chmod +x opt/satpass/psgp4gm/build2.sh
-COPY --from=build /opt/satpass/psgp4gm/psgp4gm.so /opt/satpass/psgp4gm
+COPY ./pygal/pygal.pyx /opt/satpass/pygal
+COPY ./pygal/build.sh /opt/satpass/pygal
+RUN chmod +x opt/satpass/pygal/build.sh
+COPY --from=build /opt/satpass/pygal/pygal.so /opt/satpass/pygal
 COPY ./passes/*.py /opt/satpass/passes
 COPY ./passes/data/satellites.conf /opt/satpass/passes/data
 COPY ./satools/*.py /opt/satpass/satools
@@ -78,3 +78,4 @@ RUN echo "\e[A": history-search-backward >> ~/.inputrc
 RUN echo "PS1='\w\$ '" >> ~/.profile
 RUN echo "export INPUTRC=~/.inputrc" >> ~/.profile
 RUN echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/libgal-0.6.0/lib" >> ~/.bashrc
+RUN echo "export PYTHONPATH=$PYTHONPATH:/opt/satpass/pygal/" >> ~/.bashrc

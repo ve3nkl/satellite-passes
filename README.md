@@ -17,15 +17,32 @@ The number in the middle of the small circle is the maximum satellite elevation 
 Installation of the code, especially the General Astrodynamics Library the code depends on, can be a time consuming task. The easiest way to try the code is to download and run a Docker image. It does not require any installation (except Docker, if it is not yet installed). Also, it should work on any operating system supporting Docker.
 
 ```
-  docker pull awasys/satpass:v13
+  docker pull awasys/satpass:v14
 ```
 Run the image in a terminal:
 
 ```
-  docker run -it --entrypoint /bin/bash awasys/satpass:v13
+  docker run -it --entrypoint /bin/bash awasys/satpass:v14
 ```
 
-Now skip to the *How to use* section.
+Now skip to the *How to use* section and play with the code, but return back here to find out how to copy the pdf files you produced to your host file system (because they are created in the docker container filesystem).
+
+After your pdf files are generated, go to your host computer shell (the one where you can issue the docker command) and issue the following command:
+
+```
+docker ps -a
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+44b70c6a3635        satpass:v14         "/bin/bash"         7 minutes ago       Up 7 minutes                            stupefied_rhodes
+```
+
+The output will look close to the one shown above, copy the container name where you played with the code. It will be displayed under the NAMES title. In this example this name is *stupefied_rhodes*. Now to copy your pdf file from the docker container to your host filesystem, use the following command:
+
+```
+docker cp stupefied_rhodes:/opt/satpass/passes/20220812-155434-FN03gu.pdf ./
+```
+
+Replace the container name and pdf file name with the names in your environment. This command will copy the pdf file into your current local directory. Now you can view or print it.
 
 ### What does it consist of?
 There are 3 utilities written in Python:
@@ -36,7 +53,7 @@ There are 3 utilities written in Python:
 
 **passpdf.py** creates a pdf file with visual representations of the passes based on the data calculated by satpass.py.
 
-In addition to Python 3 and a number of Python modules the **satpass.py** utility requires a shared library to be installed: [General Astrodynamics Library - libgal](http://www.amsat-bda.org/GAL_Home.html). A copy of the distribution of the library version 0.6.0 is included in directory LibGAL. One of the required Python modules (PyX) needs TeX (LaTeX) to be installed in order to be able to generate *pdf* files.
+In addition to Python 3 (at least version 3.9 recommended) and a number of Python modules the **satpass.py** utility requires a shared library to be installed: [General Astrodynamics Library - libgal](http://www.amsat-bda.org/GAL_Home.html). A copy of the distribution of the library version 0.6.0 is included in directory LibGAL. One of the required Python modules (PyX) needs TeX (LaTeX) to be installed in order to be able to generate *pdf* files.
 
 ### Where can it run?
 Since the required library is written in C++ and the utilities are written in Python 3 (well, there is also a Cython component), in theory, it can run anywhere. However, it was tested under Linux on some Raspberry Pi models (including Pi Zero) and under Mac OS with Python, Cython and various Python packages installed using macports. 
@@ -48,9 +65,9 @@ There are 3 major steps:
 
   It is recommended that you start with installing LibGAL first. Installation instructions are included within its distribution package. The link mentioned above contains some documentation on the library.
 
-2. Module psgp4gm
+2. Python Module *pygal*
 
-  After you generate the **libgal** library, go to the **psgp4gm** folder and update the **build.sh** script so that the variables point to the correct locations in your environment. There is no script for Windows (sorry), but, perhaps, a similar install could be done under Cygwin. You will need Cython to compile the **psgp4gm** package. After successful run of the build you should have the **psgp4gm.so** library that will be recognized by Python as a an external module. It serves as a wrapper around **libgal**, so that the Python code can make use of this library.
+  After you generate the **libgal** library, go to the **pygal** folder and update the **build.sh** script so that the variables point to the correct locations in your environment. There is no script for Windows (sorry), but, perhaps, a similar install could be done under Cygwin. You will need Cython to compile the **pygal** package. After successful run of the build you should have the **pygal.so** library that will be recognized by Python as an external module. It serves as a wrapper around **libgal**, so that the Python code can make use of this library.
 
 3. Python Code
 

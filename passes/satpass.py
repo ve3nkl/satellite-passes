@@ -23,6 +23,9 @@ SOFTWARE.
 2021/07/28   1.2   Calculate orbit # for elliptical orbits
 2021/07/31   1.3   Determine timezone automatically if it is not 
                    specified explicitely
+2022/08/06   1.4   Use new 'pygal' interface to 'libGAL' instead of the old
+                   'psgp4gm'. Add --sort-by option to sort the output either
+                   by time (default) or satellite name
 -----------------------------------------------------------------------------
 
 This script calculates and prints details on satellite passes as a yaml document.
@@ -37,20 +40,10 @@ import decimal
 sys.path.append('../')
 import satools.SAConfig as sc
 import satools.SAGeo as sg
-from psgp4gm import psgp4gm
+from pygal import RiseSetInfo, VisibleSatPosition, VisibleSatOrbit
 import pytz
 from timezonefinder import TimezoneFinder
 
-
-"""
-  Convert datetime to normalized epoc (see psgp4gm.epoc2norm for details)
-"""
-def dt2norm(dt):
-  year, month, day, hour, minute, second, wday, yday, dst = dt.timetuple()
-  if year < 1960 or year > 2059:
-    raise Exception("datetime is out of valid range: " + str(dt))
-  e = yday + ((( hour * 60 + minute ) * 60 + second) / (24 * 60 * 60))
-  return psgp4gm.epoc2norm(year, e)
 
 """  
   Validate date in the format yyyy-mm-dd
@@ -148,7 +141,7 @@ def valid_altitude(s):
   directly when the module is imported. This function returns a tuple containing a return code, a list of lines for
   stdout and a list of lines for stderr.
 """
-def main_line(tle_dir, sat_objects, spot_name, spot_object, altitude, time_zone_delta, starting, period, max_elevation, between_hours):
+def main_line(tle_dir, sat_objects, spot_name, spot_object, altitude, time_zone_delta, starting, period, max_elevation, between_hours, sorting_by):
 
   rc = 0
   out = []
@@ -211,20 +204,25 @@ def main_line(tle_dir, sat_objects, spot_name, spot_object, altitude, time_zone_
     
     try:
     
-      psgp4gm.init_wgs72(data[1].encode(), data[2].encode(), spot_object.latitude, spot_object.longitude, altitude)
+      vso = VisibleSatOrbit(
+        bytes(data[1],"UTF-8"),
+        bytes(data[2],"UTF-8"),
+        spot_object.latitude, 
+        spot_object.longitude, 
+        altitude 
+      )
       
       current_utc = start_utc    
       
       while(current_utc <= end_utc):
-        r = psgp4gm.find_rise_set(current_utc.year, current_utc.month, current_utc.day, current_utc.hour, current_utc.minute, current_utc.second, 0, 5)
-
-        rise_datetime = datetime.datetime(r[0][0], r[0][1], r[0][2], r[0][3], r[0][4], r[0][5], 0, None)
-        rise_azimuth  = decimal.Decimal(str(r[2]))
-        max_datetime  = datetime.datetime(r[3][0], r[3][1], r[3][2], r[3][3], r[3][4], r[3][5], 0,None)
-        max_angle     = decimal.Decimal(str(r[4]))
-        max_azimuth   = decimal.Decimal(str(r[5]))
-        set_datetime  = datetime.datetime(r[6][0], r[6][1], r[6][2], r[6][3], r[6][4], r[6][5], 0, None)
-        set_azimuth   = decimal.Decimal(str(r[8]))
+        rsi = vso.find_rise_set(current_utc, 0, 5)
+        rise_datetime = rsi.get_aos_time()
+        rise_azimuth  = decimal.Decimal(str(rsi.get_aos_azimuth()))
+        max_datetime  = rsi.get_max_time()
+        max_angle     = decimal.Decimal(str(rsi.get_max_elevation()))
+        max_azimuth   = decimal.Decimal(str(rsi.get_max_azimuth()))
+        set_datetime  = rsi.get_los_time()
+        set_azimuth   = decimal.Decimal(str(rsi.get_los_azimuth()))
       
         if rise_datetime <= end_utc:
       
@@ -244,7 +242,7 @@ def main_line(tle_dir, sat_objects, spot_name, spot_object, altitude, time_zone_
             tzstr =  sign + str(total_seconds // 3600).rjust(2, "0") + ":"
             tzstr += str(total_seconds % 3600 // 60).rjust(2, "0")
       
-          if r[4] >= max_elevation:
+          if max_angle >= max_elevation:
             
             if (between_hours[0] == between_hours[1]) or \
                ((between_hours[0] < between_hours[1]) and (set_datetime2.hour >= between_hours[0] and rise_datetime2.hour < between_hours[1])) or \
@@ -252,7 +250,7 @@ def main_line(tle_dir, sat_objects, spot_name, spot_object, altitude, time_zone_
       
               # Calculate orbit number.
               orbit_s = ""
-              orbit_n = psgp4gm.calculate_orbit_number(dt2norm(rise_datetime))
+              orbit_n = rsi.get_orbit_number()
               if orbit_n >= 0:
                 orbit_s = str(orbit_n)
               
@@ -264,7 +262,8 @@ def main_line(tle_dir, sat_objects, spot_name, spot_object, altitude, time_zone_
                    'rise-orbit': orbit_s,
                    'rise-info':{'time':rise_datetime2.strftime("%H:%M:%S"), 'azimuth':str(rise_azimuth.quantize(decimal.Decimal('.1')))},
                    'max-info':{'time':max_datetime2.strftime("%H:%M:%S"), 'azimuth':str(max_azimuth.quantize(decimal.Decimal('.1'))), 'elevation':str(max_angle.quantize(decimal.Decimal('.1')))},
-                   'set-info':{'time':set_datetime2.strftime("%H:%M:%S"), 'azimuth':str(set_azimuth.quantize(decimal.Decimal('.1')))} }}
+                   'set-info':{'time':set_datetime2.strftime("%H:%M:%S"), 'azimuth':str(set_azimuth.quantize(decimal.Decimal('.1')))},
+                   'rise-timestamp':rise_datetime2.strftime("%Y%m%d%H%M%S")}}
               obj.append(o)
       
         current_utc = set_datetime + datetime.timedelta(minutes=10)
@@ -275,6 +274,11 @@ def main_line(tle_dir, sat_objects, spot_name, spot_object, altitude, time_zone_
       traceback.print_exc()
       print( )
       quit(1)
+
+  if sorting_by == "time":    # Sort passes by AOS time
+    obj.sort(key=lambda x: x["sat-pass"]["rise-timestamp"])
+  else:                       # Sort passes by Satellite name
+    obj.sort(key=lambda x: x["sat-pass"]["satellite"])
 
   out = yaml.dump(obj, default_flow_style=False).split("\n")
   return (rc, out, err)
@@ -296,6 +300,7 @@ if __name__ == "__main__":
   parser.add_argument("-b", "--between-hours", action="store", type=valid_interval, default=(0, 0), help="ignore passes outside of the specified interval (hourFrom-hourTo)" )
   parser.add_argument("-z", "--time-zone-offset", action="store", type=valid_zone_offset, help="if specified along with --qth, the sepcified time offset overrides the offset specified in QTH")
   parser.add_argument("-a", "--altitude", action="store", type=valid_altitude, help="altitude, for ex.: 100, 100m or 328ft")
+  parser.add_argument("-t", "--sort-by", choices=["time", "name"], default="time", help="sort passes by satellite name (name) or by AOS time (time - default)")
   group = parser.add_mutually_exclusive_group(required=False)
   group.add_argument("-g", "--maidenhead-grid", action="store", type=valid_grid, help="if specified along with --qth, the specifeid grid overrides the location in QTH")
   group.add_argument("-n", "--standard-time", action="store_true", default=False, help="use standard time zone offset defined in QTH definition (see configuration file)")
@@ -304,8 +309,8 @@ if __name__ == "__main__":
   args = parser.parse_args()
   
   if args.version:
-    print("satpass.py verion 1.2")
-    print("Copyright (c) 2012-2020, 2021 Nikolai Ozerov (VE3NKL)")
+    print("satpass.py verion 1.4")
+    print("Copyright (c) 2012-2021, 2022 Nikolai Ozerov (VE3NKL)")
     quit(0)
 
   if args.configuration == "":
@@ -428,7 +433,7 @@ if __name__ == "__main__":
   print( between_hours )
   """
   
-  rc, out, err = main_line(tle_dir, sat_objects, spot_name, spot_object, altitude, time_zone_delta, starting, period, max_elevation, between_hours)
+  rc, out, err = main_line(tle_dir, sat_objects, spot_name, spot_object, altitude, time_zone_delta, starting, period, max_elevation, between_hours, args.sort_by)
   if rc == 0:
     for line in out:
       print(line)
